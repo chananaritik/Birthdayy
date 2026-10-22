@@ -23,6 +23,38 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
 .final{text-align:center;background:#fff;padding:85px 20px}.heart{font-size:3.5rem;animation:heartbeat 1.8s infinite}.final p{max-width:620px;margin:18px auto 25px;line-height:1.8;color:var(--muted)}footer{text-align:center;padding:23px;color:#9a7e8b;font-size:.82rem;background:#fff}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:12px 18px;border-radius:99px;z-index:35;transition:.25s;font-size:.9rem;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}.confetti{position:fixed;top:-25px;z-index:34;pointer-events:none;animation:fall linear forwards}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-16px) rotate(8deg)}}@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.13)}30%{transform:scale(1)}45%{transform:scale(1.09)}}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.1}}
 @media(max-width:720px){.cards{grid-template-columns:1fr}.interests{grid-template-columns:repeat(2,1fr)}.photos{grid-template-columns:repeat(2,1fr)}.photo{height:220px}}@media(max-width:420px){.photos{grid-template-columns:1fr}.photo{height:260px}.actions .btn{width:100%}}
+
+/* Personal additions: comedy, cinematic memory, and the meow recording */
+.comedy{background:#fff9f0}
+.cinema{background:linear-gradient(135deg,#f5efff,#fff7f4 58%,#fffaf0);overflow:hidden}
+.cinema-scene{position:relative;max-width:850px;margin:28px auto 0;padding:clamp(24px,5vw,48px);border:1px solid #eadcf1;border-radius:28px;background:rgba(255,255,255,.68);box-shadow:0 18px 50px rgba(78,50,82,.08)}
+.cinema-scene:before{content:"♪  ♫  ♪";display:block;text-align:center;letter-spacing:.65em;font-size:1.4rem;color:#a17ba9;margin-bottom:18px}
+.cinema-scene p{line-height:1.9;color:#5d4c60}
+.cinema-scene .stage-note{font-size:.82rem;text-transform:uppercase;letter-spacing:.14em;color:#9a7ca2;text-align:center}
+.romcom-line{font-family:Georgia,serif;font-size:clamp(1.25rem,3vw,1.8rem);text-align:center;line-height:1.5;color:#533d5c;margin:18px 0}
+.awards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:28px}
+.award{border:1px solid #f0dfe5;border-radius:18px;background:#fff;padding:20px;text-align:left;color:var(--ink);cursor:pointer;min-height:120px;transition:transform .2s,box-shadow .2s}
+.award:hover{transform:translateY(-3px);box-shadow:0 12px 28px #6e425515}
+.award strong{display:block;margin:9px 0 5px}
+.award span{font-size:.88rem;color:var(--muted)}
+.award-reveal{min-height:62px;margin:18px auto 0;padding:16px 20px;max-width:700px;background:#fff;border:1px dashed #dfb6c5;border-radius:16px;text-align:center;line-height:1.7}
+.fortune-box{max-width:720px;margin:24px auto 0;padding:26px;border-radius:24px;background:#fff;border:1px solid #f0dfe5;text-align:center}
+.fortune-text{font-family:Georgia,serif;font-size:clamp(1.15rem,3vw,1.55rem);line-height:1.5;min-height:76px;display:flex;align-items:center;justify-content:center}
+.meow-card{max-width:760px;margin:24px auto 0;border-radius:24px;padding:clamp(22px,4vw,36px);background:#fff;border:1px solid #f0dfe5;text-align:center}
+.meow-card audio{width:min(100%,440px);margin:14px auto}
+.meow-note{font-size:.88rem;color:var(--muted);line-height:1.7}
+.mode-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:22px 0}
+.mode-button{border:1px solid #e6cbd6;border-radius:999px;background:white;color:var(--ink);padding:12px 18px;font:inherit;cursor:pointer}
+.mode-button:hover{background:#fff0f4}
+.quest{max-width:760px;margin:28px auto 0;padding:24px;border:1px solid #efd9e2;background:#fff;border-radius:22px}
+.quest-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.quest-track{height:8px;background:#f5e6ec;border-radius:99px;overflow:hidden}
+.quest-fill{height:100%;width:0;background:#d97d9a;border-radius:99px;transition:width .3s}
+.quest-list{display:grid;gap:10px;margin-top:18px}
+.quest-item{display:flex;gap:12px;align-items:center;padding:12px;border-radius:12px;background:#fff8fa}
+.quest-item input{accent-color:#d97d9a;width:18px;height:18px}
+@media(max-width:620px){.awards{grid-template-columns:1fr}.cinema-scene{padding:24px 20px}}
+
 </style>
 </head>
 <body>
@@ -33,7 +65,41 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
 </header>
 <section class="story" id="story"><div class="wrap"><div class="center kicker">The plot twist I didn't see coming</div><h2>You brought the light in.</h2><p class="intro center">Before you, life was life. Then you showed up—and the ordinary started feeling like something I wanted to remember.</p><div class="cards"><article class="card"><div class="emoji">🌤️</div><b>Days feel brighter</b>Your existence has a way of making even an average day feel like it might turn into a favourite memory.</article><article class="card"><div class="emoji">🫶</div><b>Little things matter</b>A conversation, a thought of you, a tiny detail you share—somehow, they stay with me longer than they should.</article><article class="card"><div class="emoji">✨</div><b>More to look forward to</b>More laughter, sunsets, food to try, and moments that are ours.</article></div></div></section>
 <section class="bumble"><div class="wrap"><div class="center kicker">Where the story started</div><h2>One bio. A whole new chapter.</h2><p class="intro center">It started with a few lines on Bumble. I couldn't have known then how much those words would come to mean to me.</p><div class="quote"><p>Happy, free, confused, and lonely at the same time.<br><br>Who should stay away?<br>— if you do any sorts of nasha,<br>— are a non-vegetarian, or<br>— into hookups / casual stuff</p><small>V, 23 · Analyst at Consulting · the bio that started it all ♡</small></div><p class="intro center" style="margin-top:24px;margin-bottom:0">Of all the profiles, all the days, all the little coincidences—I'm really glad our paths crossed.</p></div></section>
+
+<section class="cinema" id="first-sight"><div class="wrap">
+  <div class="center kicker">A scene my brain directed</div>
+  <h2>The day the violins started.</h2>
+  <p class="intro center">A memory with a very real feeling and a completely imaginary Bollywood budget.</p>
+  <div class="cinema-scene">
+    <div class="stage-note">Scene 01 · The first time I saw you</div>
+    <p>I was wearing a red shirt. You were walking towards me in a mouse-coloured dress.</p>
+    <p>And, for a moment, my brain decided this was no ordinary entrance. Somewhere in my imagination, the violins had started playing like a scene from <em>Mohabbatein</em>—Sushmita Sen making that iconic entrance, a dramatic breeze blowing, and everyone around us inexplicably dancing in the background.</p>
+    <p class="romcom-line">None of that actually happened.<br>Except, somehow, all of it did in my head.</p>
+    <p>There was no cinematic wind machine. No background dancers. No orchestra hiding behind a tree. Just you walking towards me—and me, apparently, directing an entire romantic blockbuster internally.</p>
+    <p style="text-align:center;margin-bottom:0"><strong>Budget:</strong> ₹0 · <strong>Production value:</strong> emotionally unreasonable · <strong>Lead actress:</strong> Vartika ♡</p>
+  </div>
+</div></section>
+
 <section class="mint"><div class="wrap"><div class="center kicker">A few things that feel like you</div><h2>Things I'd love to share with you.</h2><p class="intro center">A wishlist of little joys—some for now, some for whenever life gives us the chance.</p><div class="interests"><div class="interest"><div class="big">🐈</div><h3>Cat dates</h3><p>Making friends with every cat we meet. Obviously.</p></div><div class="interest"><div class="big">🌊</div><h3>Beach sunsets</h3><p>Warm sand, salty air, and nowhere else we need to be.</p></div><div class="interest"><div class="big">🥘</div><h3>Veggie food trails</h3><p>Finding the best Indian vegetarian food and ordering “just one more thing.”</p></div><div class="interest"><div class="big">🌙</div><h3>Slow evenings</h3><p>Long talks, comfortable silences, and being present.</p></div></div></div></section>
+
+<section class="comedy" id="comedy"><div class="wrap">
+  <div class="center kicker">A highly unofficial birthday ceremony</div>
+  <h2>Vartika, according to very serious experts.</h2>
+  <p class="intro center">The committee has met. The evidence is overwhelming. The awards are legally binding in absolutely no jurisdictions.</p>
+  <div class="awards">
+    <button class="award" type="button" onclick="revealAward(0)"><div>🏆</div><strong>Best Leading Lady</strong><span>For the scene my brain still hasn't recovered from.</span></button>
+    <button class="award" type="button" onclick="revealAward(1)"><div>🐈</div><strong>Honorary Cat Whisperer</strong><span>For having the correct priorities in life.</span></button>
+    <button class="award" type="button" onclick="revealAward(2)"><div>🎤</div><strong>Outstanding Comedy Taste</strong><span>For appreciating the fine art of making someone laugh.</span></button>
+    <button class="award" type="button" onclick="revealAward(3)"><div>💗</div><strong>Lifetime Achievement in Being You</strong><span>No competition. The judging panel is biased.</span></button>
+  </div>
+  <div class="award-reveal" id="awardReveal" aria-live="polite">Tap an award to hear the committee's official citation. The committee is just me, but still.</div>
+  <div class="fortune-box">
+    <div class="kicker">The universe has submitted a birthday forecast</div>
+    <div class="fortune-text" id="fortuneText" aria-live="polite">Tap below to consult the extremely qualified cosmic department.</div>
+    <button class="btn" type="button" onclick="newFortune()">Consult the universe ✨</button>
+  </div>
+</div></section>
+
 <section class="gallery"><div class="wrap"><div class="center kicker">A gallery in progress</div><h2>Your favourite face, in a few frames.</h2><p class="intro center">Add photos to the placeholders before publishing. The upload preview is temporary until you include the files in the website folder.</p>
 <div class="photos">
 <label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 1" onchange="previewPhoto(event,this)"><div class="placeholder">📷<strong>A favourite photo</strong><span>Tap to preview a picture</span></div><img alt="A favourite photo" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
@@ -60,6 +126,52 @@ Happy birthday, Vartika. I hope this is the start of a year that is as lovely as
 With lots of love,
 Someone who's very glad he met you ♡</textarea><div class="actions"><button class="btn" onclick="saveWish()">Save wish on this device</button><button class="btn light" onclick="downloadWish()">Download wish as .txt</button><span class="status" id="saveStatus">You can edit every word above.</span></div></div></div></section>
 <section class="final"><div class="heart">💗</div><div class="kicker">One last thing</div><h2>I'm glad it's you, Vartika.</h2><p>May your birthday be soft around the edges, full of your favourite things, and the beginning of a year that gives back some of the happiness you bring into the world.</p><button class="btn" onclick="celebrate()">Tap for birthday magic ✨</button></section>
+
+<section class="story" id="meow"><div class="wrap">
+  <div class="center kicker">A sound that deserves its own museum</div>
+  <h2>Meow meow meow meow.</h2>
+  <p class="intro center">Some people leave love notes. Some leave voice messages. Some recordings are simply too iconic to be left buried in a chat.</p>
+  <div class="meow-card">
+    <div style="font-size:3rem" aria-hidden="true">🐈‍⬛ 🎙️ ♡</div>
+    <h3>The Vartika Meow Recording™</h3>
+    <p class="meow-note">The actual recording belongs here. Add your audio file at <code>audio/vartika-meow.mp3</code> in the website repository. Until you add it, this player will show as unavailable—no fake audio, because the original is the whole point.</p>
+    <audio controls preload="none" id="meowAudio">
+      <source src="audio/vartika-meow.mp3" type="audio/mpeg">
+      Your browser does not support audio playback.
+    </audio>
+    <p class="meow-note" id="meowStatus" aria-live="polite">Original audio placeholder · waiting for the legendary four meows.</p>
+  </div>
+</div></section>
+
+
+<section class="mint" id="birthday-quest"><div class="wrap">
+  <div class="center kicker">A tiny birthday side quest</div>
+  <h2>Three little things to unlock.</h2>
+  <p class="intro center">No timers, no pressure. Just a few tiny reminders that today's main character is you.</p>
+  <div class="quest">
+    <div class="quest-top"><strong>Birthday quest progress</strong><span id="questCount">0 of 3 complete</span></div>
+    <div class="quest-track"><div class="quest-fill" id="questFill"></div></div>
+    <div class="quest-list">
+      <label class="quest-item"><input type="checkbox" onchange="updateQuest()"> <span>Accept your extremely official birthday award.</span></label>
+      <label class="quest-item"><input type="checkbox" onchange="updateQuest()"> <span>Consult the universe for a suspiciously good fortune.</span></label>
+      <label class="quest-item"><input type="checkbox" onchange="updateQuest()"> <span>Take one moment to feel celebrated. Yes, this counts.</span></label>
+    </div>
+    <p id="questFinish" class="center" aria-live="polite" style="margin-bottom:0">Your quest awaits, birthday girl ♡</p>
+  </div>
+</div></section>
+<section class="story" id="companion"><div class="wrap">
+  <div class="center kicker">Choose your flavour of nonsense</div>
+  <h2>Chat with your birthday companion.</h2>
+  <p class="intro center">Pick a conversation starter, then tell the chat widget whether you're in the mood for silliness or something a little softer.</p>
+  <div class="mode-row">
+    <button class="mode-button" type="button" onclick="setCompanionMode('funny')">😂 Make me smile</button>
+    <button class="mode-button" type="button" onclick="setCompanionMode('romantic')">💗 Be a little romantic</button>
+    <button class="mode-button" type="button" onclick="setCompanionMode('cats')">🐈 Tell me a cat joke</button>
+  </div>
+  <div class="award-reveal" id="companionPrompt" aria-live="polite">Choose a mood and I'll give you a message to start with. Then open the Sprinklr chat bubble to continue.</div>
+  <p class="center" style="font-size:.88rem;color:var(--muted)">These buttons prepare a conversation starter; the Sprinklr agent's behaviour is configured separately in Sprinklr.</p>
+</div></section>
+
 <footer>Made for Vartika, with love. ♡</footer><div class="toast" id="toast">A little birthday magic, just for you ✨</div>
 <script>
 const progress=document.getElementById('progress');window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(max>0?window.scrollY/max*100:0)+'%'});
@@ -69,6 +181,69 @@ function removePhoto(event,button){event.preventDefault();event.stopPropagation(
 function saveWish(){try{localStorage.setItem('vartikaBirthdayWish',document.getElementById('wish').value);document.getElementById('saveStatus').textContent='Saved on this device ✓'}catch(e){document.getElementById('saveStatus').textContent='Could not save here—download a text copy instead.'}}
 function downloadWish(){const url=URL.createObjectURL(new Blob([document.getElementById('wish').value],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='birthday-wish-for-vartika.txt';a.click();URL.revokeObjectURL(url)}
 try{const saved=localStorage.getItem('vartikaBirthdayWish');if(saved)document.getElementById('wish').value=saved}catch(e){}
+
+const awardLines = [
+  "Citation: for walking towards one person and accidentally triggering an entire imaginary Mohabbatein soundtrack, breeze machine and dance ensemble.",
+  "Citation: for reminding us that cats are excellent company and that the correct response to a cat is usually to say hello.",
+  "Citation: for knowing that laughter is an underrated superpower. This award includes unlimited imaginary applause.",
+  "Citation: for being exactly the person this page was made for. No nominees, no voting, no recount."
+];
+function revealAward(index){
+  const el=document.getElementById('awardReveal');
+  if(el) el.textContent=awardLines[index]||"The committee is still deliberating.";
+}
+const fortunes=[
+  "Today's forecast: 100% chance of being celebrated, with a high probability of cake.",
+  "The stars recommend something delicious, a good laugh, and absolutely no unnecessary responsibilities.",
+  "Your lucky number is the number of compliments you deserve. The cosmic department has run out of paper.",
+  "A cat somewhere has silently approved of your birthday. This is considered a prestigious endorsement.",
+  "Breaking news: birthday girl remains adorable. Experts report no change in the foreseeable future.",
+  "The universe says take a deep breath, smile, and let people make a fuss over you today."
+];
+let lastFortune=-1;
+function newFortune(){
+  let n=Math.floor(Math.random()*fortunes.length);
+  if(fortunes.length>1&&n===lastFortune)n=(n+1)%fortunes.length;
+  lastFortune=n;
+  const el=document.getElementById('fortuneText');
+  if(el)el.textContent=fortunes[n];
+}
+function updateQuest(){
+  const boxes=[...document.querySelectorAll('.quest-item input')];
+  const count=boxes.filter(x=>x.checked).length;
+  const countEl=document.getElementById('questCount');
+  const fill=document.getElementById('questFill');
+  const finish=document.getElementById('questFinish');
+  if(countEl)countEl.textContent=count+' of '+boxes.length+' complete';
+  if(fill)fill.style.width=(count/boxes.length*100)+'%';
+  if(finish)finish.textContent=count===boxes.length
+    ? "Quest complete. Official birthday-girl status: gloriously confirmed. ♡"
+    : "Your quest awaits, birthday girl ♡";
+}
+const companionPrompts={
+  funny:"Make me laugh with an original, affectionate birthday joke. Keep it clever, gentle, and a little absurd.",
+  romantic:"Tell me something warm and sincere about why I deserve to feel special today. Don't invent shared memories.",
+  cats:"Tell me an original cat joke, ideally with the seriousness of a breaking-news report."
+};
+function setCompanionMode(mode){
+  const el=document.getElementById('companionPrompt');
+  if(!el)return;
+  const prompt=companionPrompts[mode]||companionPrompts.funny;
+  el.textContent=prompt;
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(prompt).then(()=>{
+      el.textContent=prompt+"  (Copied—paste this into the Sprinklr chat.)";
+    }).catch(()=>{});
+  }
+}
+(function checkMeowAudio(){
+  const audio=document.getElementById('meowAudio');
+  const status=document.getElementById('meowStatus');
+  if(!audio||!status)return;
+  audio.addEventListener('error',()=>{status.textContent="Audio file not added yet. Add audio/vartika-meow.mp3 to the repository to play the original recording.";});
+  audio.addEventListener('canplay',()=>{status.textContent="The legendary recording is ready. Please treat this cultural artifact with respect. ♡";});
+})();
+
 </script>
 <!-- Sprinklr Live Chat: connects to the AI agent configured in your Sprinklr environment. -->
 <script>
