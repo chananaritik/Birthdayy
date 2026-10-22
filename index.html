@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fff7f3">
+<meta name="description" content="A little corner of the internet made with love for Vartika.">
+<title>For Vartika, with love ♡</title>
+<style>
+:root{--ink:#392a35;--muted:#765f6b;--pink:#ed8ca6;--rose:#b96883;--cream:#fff8f3;--mint:#eaf7f3;--line:#f0dfe5}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;color:var(--ink);font-family:ui-rounded,"Avenir Next",system-ui,-apple-system,BlinkMacSystemFont,sans-serif;background:var(--cream);overflow-x:hidden}
+.progress{height:4px;position:fixed;z-index:30;left:0;top:0;width:0;background:linear-gradient(90deg,#ee8da6,#d9c7ff,#a7ded5)}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:70px 22px 56px;position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(circle at 16% 22%,#ffdae5 0,transparent 31%),radial-gradient(circle at 86% 68%,#cdeee8 0,transparent 34%),linear-gradient(145deg,#fff8f2,#fff0f5)}
+.spark{position:absolute;font-size:clamp(22px,4vw,38px);animation:float 5s ease-in-out infinite;opacity:.78;pointer-events:none}.s1{left:9%;top:19%}.s2{right:10%;top:28%;animation-delay:-2s}.s3{left:15%;bottom:17%;animation-delay:-1s}.s4{right:15%;bottom:14%;animation-delay:-3s}
+.kicker{text-transform:uppercase;letter-spacing:.18em;font-size:.73rem;font-weight:850;color:#ad6b83}.hero h1{font-size:clamp(3.5rem,12vw,8.4rem);line-height:.9;letter-spacing:-.075em;margin:20px 0}.hero h1 em{display:block;font-family:Georgia,serif;font-weight:500;color:var(--pink);letter-spacing:-.065em}.hero p,.intro{max-width:650px;margin:20px auto;line-height:1.8;color:var(--muted);font-size:clamp(1rem,2.5vw,1.15rem)}
+.btn{border:0;border-radius:999px;padding:14px 21px;background:var(--ink);color:#fff;font:inherit;font-weight:750;cursor:pointer;box-shadow:0 10px 24px #4b2d3b20;transition:transform .2s,box-shadow .2s;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px #4b2d3b2b}.btn.light{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:center}h2{text-align:center;font-size:clamp(2rem,6vw,3.5rem);letter-spacing:-.055em;line-height:1.08;margin:12px 0 15px}.intro{margin-bottom:32px}
+.story{background:#fff}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}.card{background:linear-gradient(155deg,#fff,#fff8fa);border:1px solid var(--line);border-radius:24px;padding:25px;min-height:205px;line-height:1.65;color:var(--muted);box-shadow:0 8px 26px #6b334008}.card .emoji{font-size:2rem}.card b{display:block;color:var(--ink);font-size:1.12rem;margin:12px 0 7px}
+.bumble{background:#fff0e8}.quote{max-width:770px;margin:30px auto 0;background:#fff;border-radius:26px;padding:clamp(25px,5vw,45px);box-shadow:0 15px 40px #744d3d12;position:relative;font:clamp(1.25rem,3.5vw,2rem)/1.6 Georgia,serif}.quote:before{content:"“";font-size:6rem;line-height:.6;color:#ffc0cc;position:absolute;top:24px;left:22px}.quote p{position:relative;margin:20px 0 0}.quote small{font:750 .85rem system-ui;color:#a36d7e;display:block;margin-top:22px}
+.mint{background:var(--mint)}.interests{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.interest{background:#fff;border:1px solid #dcefeb;border-radius:22px;padding:23px 15px;text-align:center}.interest .big{font-size:2.4rem}.interest h3{margin:10px 0 6px}.interest p{font-size:.9rem;line-height:1.55;color:var(--muted);margin:0}
+.gallery{background:#fff}.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.photo{height:255px;border-radius:22px;overflow:hidden;position:relative;background:linear-gradient(135deg,#ffe1e8,#e0f5ef);border:2px dashed #e5b5c3;display:grid;place-items:center;text-align:center;padding:14px;color:#805c6b}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.photo .placeholder{position:relative;z-index:1}.photo .placeholder strong{display:block;margin:9px 0;font-size:1.05rem}.photo .placeholder span{font-size:.85rem}.photo .picker{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;z-index:2}.photo.preview img{display:block}.photo.preview .placeholder{display:none}.photo .remove{display:none;position:absolute;z-index:4;right:9px;top:9px;border:0;border-radius:99px;background:#fff;color:var(--ink);padding:7px 10px;cursor:pointer}.photo.preview .remove{display:block}.note{text-align:center;font-size:.84rem;line-height:1.6;color:#8b6d7b;margin:16px auto 0;max-width:700px}
+.letter{background:linear-gradient(145deg,#fff0f5,#fff8f0)}.paper{max-width:790px;margin:30px auto 0;padding:clamp(24px,6vw,52px);background:#fffdfb;border-radius:8px 8px 24px 24px;box-shadow:0 20px 60px #70425114;border-top:6px solid #f3b5c5}.dear{font:1.6rem Georgia,serif;color:#bd6e87}.paper textarea{width:100%;min-height:340px;resize:vertical;border:1px solid #f0d8e0;border-radius:14px;padding:16px;margin-top:16px;font:1.04rem/1.85 Georgia,serif;color:#4b3943;background:#fffdfd;outline-color:#e8a4b7}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.status{font-size:.84rem;color:#7d6470;align-self:center}
+.final{text-align:center;background:#fff;padding:85px 20px}.heart{font-size:3.5rem;animation:heartbeat 1.8s infinite}.final p{max-width:620px;margin:18px auto 25px;line-height:1.8;color:var(--muted)}footer{text-align:center;padding:23px;color:#9a7e8b;font-size:.82rem;background:#fff}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:12px 18px;border-radius:99px;z-index:35;transition:.25s;font-size:.9rem;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}.confetti{position:fixed;top:-25px;z-index:34;pointer-events:none;animation:fall linear forwards}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-16px) rotate(8deg)}}@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.13)}30%{transform:scale(1)}45%{transform:scale(1.09)}}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.1}}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.interests{grid-template-columns:repeat(2,1fr)}.photos{grid-template-columns:repeat(2,1fr)}.photo{height:220px}}@media(max-width:420px){.photos{grid-template-columns:1fr}.photo{height:260px}.actions .btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header class="hero" id="top">
+<span class="spark s1">✦</span><span class="spark s2">♡</span><span class="spark s3">✧</span><span class="spark s4">🐈</span>
+<div><div class="kicker">A little corner of the internet, just for you</div><h1>Happy Birthday,<em>Vartika.</em></h1><p>Some people arrive quietly and somehow make the whole world feel warmer. You did that to mine.</p><button class="btn" onclick="celebrate();document.querySelector('#story').scrollIntoView({behavior:'smooth'})">Open your little universe ♡</button><p style="font-size:.82rem">Made with a full heart and a million thoughts about you.</p></div>
+</header>
+<section class="story" id="story"><div class="wrap"><div class="center kicker">The plot twist I didn't see coming</div><h2>You brought the light in.</h2><p class="intro center">Before you, life was life. Then you showed up—and the ordinary started feeling like something I wanted to remember.</p><div class="cards"><article class="card"><div class="emoji">🌤️</div><b>Days feel brighter</b>Your existence has a way of making even an average day feel like it might turn into a favourite memory.</article><article class="card"><div class="emoji">🫶</div><b>Little things matter</b>A conversation, a thought of you, a tiny detail you share—somehow, they stay with me longer than they should.</article><article class="card"><div class="emoji">✨</div><b>More to look forward to</b>More laughter, sunsets, food to try, and moments that are ours.</article></div></div></section>
+<section class="bumble"><div class="wrap"><div class="center kicker">Where the story started</div><h2>One bio. A whole new chapter.</h2><p class="intro center">It started with a few lines on Bumble. I couldn't have known then how much those words would come to mean to me.</p><div class="quote"><p>Happy, free, confused, and lonely at the same time.<br><br>Who should stay away?<br>— if you do any sorts of nasha,<br>— are a non-vegetarian, or<br>— into hookups / casual stuff</p><small>V, 23 · Analyst at Consulting · the bio that started it all ♡</small></div><p class="intro center" style="margin-top:24px;margin-bottom:0">Of all the profiles, all the days, all the little coincidences—I'm really glad our paths crossed.</p></div></section>
+<section class="mint"><div class="wrap"><div class="center kicker">A few things that feel like you</div><h2>Things I'd love to share with you.</h2><p class="intro center">A wishlist of little joys—some for now, some for whenever life gives us the chance.</p><div class="interests"><div class="interest"><div class="big">🐈</div><h3>Cat dates</h3><p>Making friends with every cat we meet. Obviously.</p></div><div class="interest"><div class="big">🌊</div><h3>Beach sunsets</h3><p>Warm sand, salty air, and nowhere else we need to be.</p></div><div class="interest"><div class="big">🥘</div><h3>Veggie food trails</h3><p>Finding the best Indian vegetarian food and ordering “just one more thing.”</p></div><div class="interest"><div class="big">🌙</div><h3>Slow evenings</h3><p>Long talks, comfortable silences, and being present.</p></div></div></div></section>
+<section class="gallery"><div class="wrap"><div class="center kicker">A gallery in progress</div><h2>Your favourite face, in a few frames.</h2><p class="intro center">Add photos to the placeholders before publishing. The upload preview is temporary until you include the files in the website folder.</p>
+<div class="photos">
+<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 1" onchange="previewPhoto(event,this)"><div class="placeholder">📷<strong>A favourite photo</strong><span>Tap to preview a picture</span></div><img alt="A favourite photo" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
+<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 2" onchange="previewPhoto(event,this)"><div class="placeholder">🌷<strong>A happy memory</strong><span>Tap to preview a picture</span></div><img alt="A happy memory" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
+<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 3" onchange="previewPhoto(event,this)"><div class="placeholder">🌅<strong>A day to remember</strong><span>Tap to preview a picture</span></div><img alt="A day to remember" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
+<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 4" onchange="previewPhoto(event,this)"><div class="placeholder">🐚<strong>Our someday</strong><span>Tap to preview a picture</span></div><img alt="Our someday" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
+<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 5" onchange="previewPhoto(event,this)"><div class="placeholder">💗<strong>A candid moment</strong><span>Tap to preview a picture</span></div><img alt="A candid moment" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
+<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 6" onchange="previewPhoto(event,this)"><div class="placeholder">✨<strong>One more memory</strong><span>Tap to preview a picture</span></div><img alt="One more memory" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
+</div><p class="note">Permanent photo setup is explained in README.txt. Use photos you have permission to share, and keep in mind that a public website can be forwarded.</p></div></section>
+<section class="letter" id="letter"><div class="wrap"><div class="center kicker">The part that's yours to edit</div><h2>A birthday letter, from me to you.</h2><p class="intro center">Edit every word so it sounds like you. Save a local copy or download the wish before publishing.</p><div class="paper"><div class="dear">Dear Vartika,</div><textarea id="wish" aria-label="Editable birthday wish">Happy birthday, Vartika ❤️
+
+I don't know if I can put into words exactly what you mean to me, but I want to try.
+
+It's funny how one little Bumble bio can become the beginning of someone who brings so much light into your world. I'm grateful that our paths crossed, and that I got to know the person behind those lines—the person who makes me smile just by being herself.
+
+I hope this new year of your life brings you the kind of happiness that feels peaceful and real: beautiful beach sunsets, delicious vegetarian food, cats to fall in love with, unexpected adventures, and people who make you feel safe and appreciated.
+
+You deserve to feel loved, celebrated, understood, and chosen—not just today, but on all the ordinary days in between.
+
+Thank you for being you, and for making my world a little brighter.
+
+Happy birthday, Vartika. I hope this is the start of a year that is as lovely as you are.
+
+With lots of love,
+Someone who's very glad he met you ♡</textarea><div class="actions"><button class="btn" onclick="saveWish()">Save wish on this device</button><button class="btn light" onclick="downloadWish()">Download wish as .txt</button><span class="status" id="saveStatus">You can edit every word above.</span></div></div></div></section>
+<section class="final"><div class="heart">💗</div><div class="kicker">One last thing</div><h2>I'm glad it's you, Vartika.</h2><p>May your birthday be soft around the edges, full of your favourite things, and the beginning of a year that gives back some of the happiness you bring into the world.</p><button class="btn" onclick="celebrate()">Tap for birthday magic ✨</button></section>
+<footer>Made for Vartika, with love. ♡</footer><div class="toast" id="toast">A little birthday magic, just for you ✨</div>
+<script>
+const progress=document.getElementById('progress');window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(max>0?window.scrollY/max*100:0)+'%'});
+function celebrate(){const emojis=['💗','✨','🌸','🐾','💖','⭐','🐚'];for(let i=0;i<42;i++){const el=document.createElement('span');el.className='confetti';el.textContent=emojis[Math.random()*emojis.length|0];el.style.left=Math.random()*100+'vw';el.style.animationDuration=(2.5+Math.random()*3)+'s';el.style.fontSize=(14+Math.random()*18)+'px';document.body.appendChild(el);setTimeout(()=>el.remove(),6000)}const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}
+function previewPhoto(event,input){const file=event.target.files&&event.target.files[0];if(!file||!file.type.startsWith('image/'))return;const card=input.closest('.photo'),img=card.querySelector('img');if(img.dataset.url)URL.revokeObjectURL(img.dataset.url);img.dataset.url=URL.createObjectURL(file);img.src=img.dataset.url;img.hidden=false;card.classList.add('preview')}
+function removePhoto(event,button){event.preventDefault();event.stopPropagation();const card=button.closest('.photo'),img=card.querySelector('img');if(img.dataset.url)URL.revokeObjectURL(img.dataset.url);img.removeAttribute('src');delete img.dataset.url;img.hidden=true;card.classList.remove('preview');card.querySelector('input').value=''}
+function saveWish(){try{localStorage.setItem('vartikaBirthdayWish',document.getElementById('wish').value);document.getElementById('saveStatus').textContent='Saved on this device ✓'}catch(e){document.getElementById('saveStatus').textContent='Could not save here—download a text copy instead.'}}
+function downloadWish(){const url=URL.createObjectURL(new Blob([document.getElementById('wish').value],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='birthday-wish-for-vartika.txt';a.click();URL.revokeObjectURL(url)}
+try{const saved=localStorage.getItem('vartikaBirthdayWish');if(saved)document.getElementById('wish').value=saved}catch(e){}
+</script>
+<!-- Sprinklr Live Chat: connects to the AI agent configured in your Sprinklr environment. -->
+<script>
+window.sprChatSettings = {"appId":"6ada8b9bb4f3c76c0b6a30b9_app_2195","skin":"MODERN"};
+(function () {
+  var a, r, n, o, i, s = window, e = s.sprChat;
+  (e && e.loaded) || ((a = document), ((r = function () { r.q.push(arguments); }).q = []),
+  (s.sprChat = r), (s.sprChat.loaded = !0), (n = 0), (o = 'spr-live-chat-widget'),
+  (i = function () {
+    var e = a.getElementById(o), e = (e && e.parentNode.removeChild(e), a.createElement('script')),
+    t = ((e.type = 'text/javascript'), (e.async = !0),
+    (e.src = 'https://prod18-live-chat.sprinklr.com/api/livechat/handshake/widget/' + s.sprChatSettings.appId),
+    (e.id = o), (e.onerror = function (e) {
+      var t, a; ++n <= 3 ? setTimeout(i, 250) : ((s.sprChat.loaded = !1),
+      (t = 'WIDGET_LOAD_FAILED'), (a = e), r.q.map(function (e) {
+        if ('subscribeToUpdate' === e[0] && e[1] && 'loadCompleted' === e[1].topic) return e[1].subscriber;
+      }).map(function (e) { e && e({ response: { error: !0, errorPayload: { type: t, message: a } } }); }));
+    }), a.getElementsByTagName('script')[0]);
+    t.parentNode.insertBefore(e, t);
+  }), 'loading' !== a.readyState ? i() : a.addEventListener('DOMContentLoaded', i));
+})();
+</script>
+</body></html>
