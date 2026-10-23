@@ -55,9 +55,104 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
 .quest-item input{accent-color:#d97d9a;width:18px;height:18px}
 @media(max-width:620px){.awards{grid-template-columns:1fr}.cinema-scene{padding:24px 20px}}
 
+ 
+.media-section{background:#fff}
+.media-frame{max-width:820px;margin:26px auto 0;padding:clamp(16px,3vw,26px);border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,#fff9fb,#f8fffd);box-shadow:0 14px 40px #6b33400a}
+.media-frame video{display:block;width:100%;max-height:70vh;aspect-ratio:16/9;object-fit:contain;background:#211922;border-radius:18px}
+.media-caption{max-width:680px;margin:16px auto 0;text-align:center;line-height:1.75;color:var(--muted)}
+.bloopers-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}
+.blooper-card{padding:16px;background:#fff;border:1px solid var(--line);border-radius:22px}
+.blooper-card video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#211922;border-radius:14px}
+.blooper-card h3{margin:14px 4px 6px}
+.blooper-card p{margin:0 4px 4px;color:var(--muted);font-size:.92rem;line-height:1.6}
+@media(max-width:650px){.bloopers-grid{grid-template-columns:1fr}}
+
+
+.photos-permanent .photo-memory{margin:0;overflow:hidden;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px #6b33400a}
+.photos-permanent .photo-memory img{display:block;width:100%;height:100%;aspect-ratio:4/5;object-fit:cover}
+.photos-permanent .photo-memory figcaption{padding:12px 14px 15px;text-align:center;color:var(--muted);font-size:.92rem;line-height:1.5}
+
+
+:root{scroll-behavior:smooth;scroll-padding-top:90px}
+.site-nav{position:sticky;top:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(16px,4vw,48px);background:rgba(255,250,252,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-brand{font-weight:900;text-decoration:none;color:var(--ink);white-space:nowrap;font-size:1.05rem}
+.nav-links{display:flex;align-items:center;justify-content:flex-end;gap:clamp(8px,1.4vw,20px);flex-wrap:wrap}
+.nav-links a{color:var(--muted);font-size:.88rem;font-weight:700;text-decoration:none;white-space:nowrap}
+.nav-links a:hover{color:var(--ink)}
+.nav-toggle{display:none;border:1px solid var(--line);background:#fff;border-radius:12px;padding:8px 11px;color:var(--ink);font-size:1.1rem}
+.birthday-countdown{text-align:center;padding:clamp(24px,4vw,44px) 16px 30px;background:linear-gradient(135deg,#fff0f5,#fff9ed 52%,#eef9f5);border-bottom:1px solid var(--line)}
+.countdown-kicker{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:900;color:var(--muted)}
+.countdown-units{display:flex;justify-content:center;gap:clamp(10px,3vw,28px);margin:18px auto 10px}
+.countdown-units div{min-width:62px;display:flex;flex-direction:column;gap:3px}
+.countdown-units strong{font-size:clamp(1.6rem,5vw,3rem);line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.countdown-units span{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+#countdown-message{margin:10px 0 0;color:var(--muted)}
+.love-quiz{background:linear-gradient(180deg,#fff7fa,#fffdf9);padding:clamp(52px,8vw,88px) 0}
+.quiz-shell{max-width:760px;margin:28px auto 0;padding:clamp(20px,4vw,36px);border:1px solid var(--line);border-radius:28px;background:#fff;box-shadow:0 18px 50px #6b33400d}
+.quiz-progress{display:flex;align-items:center;gap:14px;font-size:.85rem;font-weight:800;color:var(--muted)}
+.quiz-progress-track{height:7px;flex:1;border-radius:99px;background:#f2e7ec;overflow:hidden}
+.quiz-progress-track span{display:block;height:100%;width:10%;background:linear-gradient(90deg,#d88eaa,#e9b8a7);transition:width .25s}
+.quiz-question{font-size:clamp(1.25rem,3vw,1.65rem);font-weight:900;line-height:1.3;margin:28px 0 20px;color:var(--ink)}
+.quiz-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.quiz-option{display:flex;align-items:center;gap:10px;text-align:left;width:100%;border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:#fff;color:var(--ink);font:inherit;cursor:pointer;transition:transform .15s,border-color .15s,background .15s}
+.quiz-option:hover{transform:translateY(-2px);border-color:#d88eaa}
+.quiz-option.selected{border-color:#c96f93;background:#fff0f5}
+.quiz-option.correct{border-color:#5b9b77;background:#eef9f1}
+.quiz-option.wrong{border-color:#cc7777;background:#fff1f1}
+.quiz-option:disabled{cursor:default}
+.quiz-feedback{min-height:24px;margin:16px 0 0;color:var(--muted);line-height:1.5}
+.quiz-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:18px}
+.quiz-btn{border:0;border-radius:999px;padding:12px 20px;background:var(--ink);color:#fff;font-weight:800;cursor:pointer}
+.quiz-btn:disabled{opacity:.4;cursor:not-allowed}
+.quiz-btn.secondary{background:#f7edf1;color:var(--ink);border:1px solid var(--line)}
+.quiz-result{text-align:center;padding-top:14px}
+.quiz-score{font-size:clamp(2rem,7vw,4rem);font-weight:1000;color:var(--ink)}
+.quiz-result h3{font-size:1.5rem;margin:6px 0 8px}
+.quiz-result p{color:var(--muted);line-height:1.6}
+.quiz-result img{display:block;max-width:min(100%,320px);max-height:260px;object-fit:contain;margin:18px auto;border-radius:18px}
+.cat-credit{font-size:.72rem}
+.quiz-footnote{text-align:center;color:var(--muted);font-size:.9rem;margin:22px 0 0}
+.contact-section{padding:clamp(52px,8vw,88px) 0;background:#fff}
+.contact-wrap{max-width:900px}
+.contact-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:700px;margin:28px auto}
+.contact-card{display:flex;align-items:center;gap:14px;padding:20px;border:1px solid var(--line);border-radius:20px;text-decoration:none;color:var(--ink);background:#fffafd}
+.contact-card strong,.contact-card small{display:block}
+.contact-card small{color:var(--muted);margin-top:4px;overflow-wrap:anywhere}
+.contact-icon{font-size:1.7rem}
+.contact-note{text-align:center;color:var(--muted)}
+@media(max-width:900px){.site-nav{flex-wrap:wrap}.nav-toggle{display:block}.nav-links{display:none;flex-basis:100%;justify-content:flex-start;padding:8px 0 4px}.nav-links.open{display:flex}}
+@media(max-width:560px){.quiz-options,.contact-cards{grid-template-columns:1fr}.countdown-units{gap:12px}.countdown-units div{min-width:52px}.quiz-actions{justify-content:stretch}.quiz-btn{flex:1}}
+
 </style>
 </head>
 <body>
+
+<nav class="site-nav" aria-label="Main navigation">
+  <a class="nav-brand" href="#top">♡ Vartika</a>
+  <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <div class="nav-links">
+    <a href="#top">Home</a>
+    <a href="#story">Our story</a>
+    <a href="#gallery">Photos</a>
+    <a href="#meow">Meow</a>
+    <a href="#birthday-video">Video</a>
+    <a href="#bloopers">Bloopers</a>
+    <a href="#quiz">Love quiz</a>
+    <a href="#letter">Birthday letter</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+<div class="birthday-countdown" id="top">
+  <div class="countdown-kicker">The birthday girl turns 24 in…</div>
+  <div class="countdown-units" aria-live="polite">
+    <div><strong id="cd-days">--</strong><span>days</span></div>
+    <div><strong id="cd-hours">--</strong><span>hours</span></div>
+    <div><strong id="cd-minutes">--</strong><span>minutes</span></div>
+    <div><strong id="cd-seconds">--</strong><span>seconds</span></div>
+  </div>
+  <p id="countdown-message">Counting down to 4:30 PM, 24 October ♡</p>
+</div>
+
 <div class="progress" id="progress"></div>
 <header class="hero" id="top">
 <span class="spark s1">✦</span><span class="spark s2">♡</span><span class="spark s3">✧</span><span class="spark s4">🐈</span>
@@ -73,7 +168,7 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
   <div class="cinema-scene">
     <div class="stage-note">Scene 01 · The first time I saw you</div>
     <p>I was wearing a red shirt. You were walking towards me in a mouse-coloured dress.</p>
-    <p>And, for a moment, my brain decided this was no ordinary entrance. Somewhere in my imagination, the violins had started playing like a scene from <em>Main Hoon Na</em>—Sushmita Sen making that iconic entrance, a dramatic breeze blowing, and everyone around us inexplicably dancing in the background.</p>
+    <p>And, for a moment, my brain decided this was no ordinary entrance. Somewhere in my imagination, the violins had started playing like a scene from <em>Mohabbatein</em>—Sushmita Sen making that iconic entrance, a dramatic breeze blowing, and everyone around us inexplicably dancing in the background.</p>
     <p class="romcom-line">None of that actually happened.<br>Except, somehow, all of it did in my head.</p>
     <p>There was no cinematic wind machine. No background dancers. No orchestra hiding behind a tree. Just you walking towards me—and me, apparently, directing an entire romantic blockbuster internally.</p>
     <p style="text-align:center;margin-bottom:0"><strong>Budget:</strong> ₹0 · <strong>Production value:</strong> emotionally unreasonable · <strong>Lead actress:</strong> Vartika ♡</p>
@@ -100,15 +195,150 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
   </div>
 </div></section>
 
-<section class="gallery"><div class="wrap"><div class="center kicker">A gallery in progress</div><h2>Your favourite face, in a few frames.</h2><p class="intro center">Add photos to the placeholders before publishing. The upload preview is temporary until you include the files in the website folder.</p>
-<div class="photos">
-<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 1" onchange="previewPhoto(event,this)"><div class="placeholder">📷<strong>A favourite photo</strong><span>Tap to preview a picture</span></div><img alt="A favourite photo" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
-<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 2" onchange="previewPhoto(event,this)"><div class="placeholder">🌷<strong>A happy memory</strong><span>Tap to preview a picture</span></div><img alt="A happy memory" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
-<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 3" onchange="previewPhoto(event,this)"><div class="placeholder">🌅<strong>A day to remember</strong><span>Tap to preview a picture</span></div><img alt="A day to remember" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
-<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 4" onchange="previewPhoto(event,this)"><div class="placeholder">🐚<strong>Our someday</strong><span>Tap to preview a picture</span></div><img alt="Our someday" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
-<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 5" onchange="previewPhoto(event,this)"><div class="placeholder">💗<strong>A candid moment</strong><span>Tap to preview a picture</span></div><img alt="A candid moment" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
-<label class="photo"><input class="picker" type="file" accept="image/*" aria-label="Preview photo 6" onchange="previewPhoto(event,this)"><div class="placeholder">✨<strong>One more memory</strong><span>Tap to preview a picture</span></div><img alt="One more memory" hidden><button class="remove" type="button" onclick="removePhoto(event,this)">Remove</button></label>
-</div><p class="note">Permanent photo setup is explained in README.txt. Use photos you have permission to share, and keep in mind that a public website can be forwarded.</p></div></section>
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="center kicker">Little pieces of us</div>
+    <h2>Your favourite face, in a few frames.</h2>
+    <p class="intro center">A few moments I would happily keep replaying.</p>
+    <div class="photos photos-permanent">
+<figure class="photo photo-memory">
+  <img src="photos/IMG_4368.JPG" alt="A favourite kind of close" loading="lazy">
+  <figcaption>A favourite kind of close ♡</figcaption>
+</figure>
+<figure class="photo photo-memory">
+  <img src="photos/IMG_4640.JPG" alt="Where the sky meets the sea" loading="lazy">
+  <figcaption>Where the sky meets the sea ♡</figcaption>
+</figure>
+<figure class="photo photo-memory">
+  <img src="photos/IMG_4646.JPG" alt="Golden-hour girl" loading="lazy">
+  <figcaption>Golden-hour girl ♡</figcaption>
+</figure>
+<figure class="photo photo-memory">
+  <img src="photos/IMG_4711.jpg" alt="A little green escape" loading="lazy">
+  <figcaption>A little green escape ♡</figcaption>
+</figure>
+<figure class="photo photo-memory">
+  <img src="photos/IMG_4758.JPG" alt="Ocean-side daydream" loading="lazy">
+  <figcaption>Ocean-side daydream ♡</figcaption>
+</figure>
+<figure class="photo photo-memory">
+  <img src="photos/IMG_4789.JPG" alt="Us, framed by the sea" loading="lazy">
+  <figcaption>Us, framed by the sea ♡</figcaption>
+</figure>
+<figure class="photo photo-memory">
+  <img src="photos/IMG_4812.JPG" alt="A memory in silhouette" loading="lazy">
+  <figcaption>A memory in silhouette ♡</figcaption>
+</figure>
+<figure class="photo photo-memory">
+  <img src="photos/IMG_4914.JPG" alt="Stopping to admire the little things" loading="lazy">
+  <figcaption>Stopping to admire the little things ♡</figcaption>
+</figure>
+<figure class="photo photo-memory">
+  <img src="photos/IMG_4983.JPG" alt="The smile behind the hat" loading="lazy">
+  <figcaption>The smile behind the hat ♡</figcaption>
+</figure>
+<figure class="photo photo-memory">
+  <img src="photos/IMG_4996.JPG" alt="The hat deserves its own moment" loading="lazy">
+  <figcaption>The hat deserves its own moment ♡</figcaption>
+</figure>
+<figure class="photo photo-memory">
+  <img src="photos/IMG_5156.JPG" alt="One more look" loading="lazy">
+  <figcaption>One more look ♡</figcaption>
+</figure>
+<figure class="photo photo-memory">
+  <img src="photos/IMG_5157.JPG" alt="One more memory, just because" loading="lazy">
+  <figcaption>One more memory, just because ♡</figcaption>
+</figure>
+    </div>
+  </div>
+</section>
+
+
+<section class="media-section" id="birthday-video">
+  <div class="wrap">
+    <div class="center kicker">A little memory in motion</div>
+    <h2>Press play, birthday girl ♡</h2>
+    <p class="intro center">Some things deserve more than a photograph.</p>
+    <div class="media-frame">
+      <video controls playsinline preload="metadata">
+        <source src="videos/vartika-video.mp4" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+      <p class="media-caption">A little video, saved here just for you. ♡</p>
+    </div>
+  </div>
+</section>
+
+<section class="comedy" id="bloopers">
+  <div class="wrap">
+    <div class="center kicker">The director's cut</div>
+    <h2>And now, the evidence.</h2>
+    <p class="intro center">The polished version gets the violins. The bloopers get the encore. These are the bits that make the whole thing even more lovable.</p>
+    <div class="bloopers-grid">
+      <article class="blooper-card">
+        <video controls playsinline preload="metadata">
+          <source src="videos/bloopers-1.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+        <h3>Blooper no. 1</h3>
+        <p>A little behind-the-scenes chaos.</p>
+      </article>
+      <article class="blooper-card">
+        <video controls playsinline preload="metadata">
+          <source src="videos/bloopers-2.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+        <h3>Blooper no. 2</h3>
+        <p>For scientific completeness, obviously.</p>
+      </article>
+    </div>
+    <p class="note">Add your clips in the <code>videos</code> folder using the filenames shown above. You can add more blooper cards by copying one card and changing its filename and caption.</p>
+  </div>
+</section>
+
+
+<section class="love-quiz" id="quiz">
+  <div class="wrap">
+    <div class="center kicker">A very important academic assessment</div>
+    <h2>How well do you know our little story?</h2>
+    <p class="intro center">Ten questions. No studying. Mildly unreasonable levels of romance. Choose carefully, birthday girl.</p>
+    <div class="quiz-shell">
+      <div class="quiz-progress"><span id="quiz-progress-text">Question 1 of 10</span><div class="quiz-progress-track"><span id="quiz-progress-bar"></span></div></div>
+      <form id="loveQuizForm">
+        <div id="quiz-question" class="quiz-question"></div>
+        <div id="quiz-options" class="quiz-options"></div>
+        <p id="quiz-feedback" class="quiz-feedback" aria-live="polite"></p>
+        <div class="quiz-actions">
+          <button type="button" class="quiz-btn" id="quiz-next" disabled>Next question →</button>
+          <button type="button" class="quiz-btn secondary" id="quiz-restart" hidden>Play again</button>
+        </div>
+      </form>
+      <div id="quiz-result" class="quiz-result" hidden aria-live="polite">
+        <div class="quiz-score" id="quiz-score"></div>
+        <h3 id="quiz-result-title"></h3>
+        <p id="quiz-result-copy"></p>
+        <img id="quiz-cat" alt="A celebratory cat GIF" loading="lazy">
+        <p class="cat-credit">Cat GIFs from Wikimedia Commons; see credits below.</p>
+        <button type="button" class="quiz-btn" id="quiz-result-restart">One more round? ♡</button>
+      </div>
+    </div>
+    <p class="quiz-footnote">Disclaimer: the exam board is biased in your favour. The examiner is also very much in love with you.</p>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="wrap contact-wrap">
+    <div class="center kicker">A direct line to your favourite human</div>
+    <h2>Contact the boyfriend department</h2>
+    <p class="intro center">For urgent cuddles, beach plans, vegetarian food recommendations, or complaints about the quiz marking scheme.</p>
+    <div class="contact-cards">
+      <a class="contact-card" href="tel:+919354035394"><span class="contact-icon">☎</span><span><strong>Call Ritik</strong><small>+91 9354035394</small></span></a>
+      <a class="contact-card" href="mailto:ritvika0909@gmail.com"><span class="contact-icon">✉</span><span><strong>Email us</strong><small>ritvika0909@gmail.com</small></span></a>
+    </div>
+    <p class="contact-note">The boyfriend department is open 24/7, especially for you. ♡</p>
+  </div>
+</section>
+
 <section class="letter" id="letter"><div class="wrap"><div class="center kicker">The part that's yours to edit</div><h2>A birthday letter, from me to you.</h2><p class="intro center">Edit every word so it sounds like you. Save a local copy or download the wish before publishing.</p><div class="paper"><div class="dear">Dear Vartika,</div><textarea id="wish" aria-label="Editable birthday wish">Happy birthday, Vartika ❤️
 
 I don't know if I can put into words exactly what you mean to me, but I want to try.
@@ -134,12 +364,12 @@ Someone who's very glad he met you ♡</textarea><div class="actions"><button cl
   <div class="meow-card">
     <div style="font-size:3rem" aria-hidden="true">🐈‍⬛ 🎙️ ♡</div>
     <h3>The Vartika Meow Recording™</h3>
-    <p class="meow-note">The actual recording belongs here. Add your audio file at <code>audio/vartika-meow.mp3</code> in the website repository. Until you add it, this player will show as unavailable—no fake audio, because the original is the whole point.</p>
-    <audio controls preload="none" id="meowAudio">
-      <source src="audio/vartika-meow.mp3" type="audio/mpeg">
+    <p class="meow-note">Four meows. One very serious cultural artefact. Please press play responsibly. ♡</p>
+    <audio controls preload="metadata" id="meowAudio">
+      <source src="audio/AUDIO-2026-07-25-00-12-23.m4a" type="audio/mp4">
       Your browser does not support audio playback.
     </audio>
-    <p class="meow-note" id="meowStatus" aria-live="polite">Original audio placeholder · waiting for the legendary four meows.</p>
+    <p class="meow-note" id="meowStatus" aria-live="polite">The official Vartika Meow Recording™. Press play. ♡</p>
   </div>
 </div></section>
 
@@ -183,7 +413,7 @@ function downloadWish(){const url=URL.createObjectURL(new Blob([document.getElem
 try{const saved=localStorage.getItem('vartikaBirthdayWish');if(saved)document.getElementById('wish').value=saved}catch(e){}
 
 const awardLines = [
-  "Citation: for walking towards one person and accidentally triggering an entire imaginary Main Hoon Na soundtrack, breeze machine and dance ensemble.",
+  "Citation: for walking towards one person and accidentally triggering an entire imaginary Mohabbatein soundtrack, breeze machine and dance ensemble.",
   "Citation: for reminding us that cats are excellent company and that the correct response to a cat is usually to say hello.",
   "Citation: for knowing that laughter is an underrated superpower. This award includes unlimited imaginary applause.",
   "Citation: for being exactly the person this page was made for. No nominees, no voting, no recount."
@@ -240,8 +470,8 @@ function setCompanionMode(mode){
   const audio=document.getElementById('meowAudio');
   const status=document.getElementById('meowStatus');
   if(!audio||!status)return;
-  audio.addEventListener('error',()=>{status.textContent="Audio file not added yet. Add audio/vartika-meow.mp3 to the repository to play the original recording.";});
-  audio.addEventListener('canplay',()=>{status.textContent="The legendary recording is ready. Please treat this cultural artifact with respect. ♡";});
+  audio.addEventListener('error',()=>{status.textContent="The recording could not load. Check that the audio file is committed at audio/AUDIO-2026-07-25-00-12-23.m4a.";});
+  audio.addEventListener('canplay',()=>{status.textContent="The legendary four meows are ready. Please treat this cultural artefact with respect. ♡";});
 })();
 
 </script>
@@ -266,4 +496,99 @@ window.sprChatSettings = {"appId":"6ada8b9bb4f3c76c0b6a30b9_app_2195","skin":"MO
   }), 'loading' !== a.readyState ? i() : a.addEventListener('DOMContentLoaded', i));
 })();
 </script>
+
+<script>
+(function(){
+  // Birthday: 24 October 2026, 4:30 PM India Standard Time (UTC+05:30).
+  const birthdayAt = new Date('2026-10-24T16:30:00+05:30').getTime();
+  const el = id => document.getElementById(id);
+  function updateCountdown(){
+    const diff = birthdayAt - Date.now();
+    if(diff <= 0){
+      ['cd-days','cd-hours','cd-minutes','cd-seconds'].forEach(id=>{if(el(id))el(id).textContent='0';});
+      if(el('countdown-message')) el('countdown-message').textContent = 'It is birthday time!! Happy 24th, Vartika ♡';
+      return;
+    }
+    const units = { 'cd-days':Math.floor(diff/86400000), 'cd-hours':Math.floor(diff%86400000/3600000), 'cd-minutes':Math.floor(diff%3600000/60000), 'cd-seconds':Math.floor(diff%60000/1000) };
+    Object.keys(units).forEach(id=>{if(el(id))el(id).textContent=String(units[id]).padStart(2,'0');});
+  }
+  updateCountdown(); setInterval(updateCountdown,1000);
+
+  const toggle=document.querySelector('.nav-toggle'), links=document.querySelector('.nav-links');
+  if(toggle && links){toggle.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));});links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));}
+
+  const questions = [
+    {q:'Where did we meet?', options:['Bumble','Near your office','In Gurgaon','In our hearts'], a:1, why:'Bumble started the conversation; near your office is where we met in person. And yes, you were already in my heart.'},
+    {q:'Which animal do you love the most?', options:['Cat','Squirrel','Dogs','Ritik'], a:0, why:'A cat. Though “Ritik” has made a bold campaign for second place.'},
+    {q:'Where would you rather go?', options:['Mountains','Beaches','Big cities','Anywhere with you'], a:3, why:'Trick question energy: beaches are a favourite, but the company matters most.'},
+    {q:'What is the most likely soundtrack to our first-meeting memory?', options:['Dramatic violins','A horror-movie sting','A phone ringtone','Complete silence'], a:0, why:'The imaginary Mohabbatein violins, the breeze, the slow-motion entrance. All in my head, all unforgettable.'},
+    {q:'What colour shirt was Ritik wearing that day?', options:['Blue','Black','Red','Mouse-colour'], a:2, why:'Red shirt for me; mouse-colour dress for you. The cinematic universe remembers.'},
+    {q:'What was the legendary audio recording?', options:['A love poem','Four meows','A weather report','A TED Talk'], a:1, why:'Meow meow meow meow. Grammy committee, please take note.'},
+    {q:'What is the ideal food plan?', options:['Non-vegetarian tasting menu','Vegetarian Indian food','Only desserts forever','Whatever the cat orders'], a:1, why:'Vegetarian Indian food, obviously. The cat may supervise.'},
+    {q:'What kind of evening feels most like us?', options:['Loud party till sunrise','Peaceful sunset and talking','A competitive spreadsheet review','A 6 AM board meeting'], a:1, why:'Peace, sunsets, conversation, and absolutely no spreadsheet-based romance.'},
+    {q:'What should happen if you get all 10 questions right?', options:['A stern audit','A celebratory cat','More homework','A performance review'], a:1, why:'Correct. Immediate promotion to Chief Cat Officer.'},
+    {q:'Final question: who is ridiculously lucky to have you?', options:['The cat','The beach','Ritik','All of the above, but especially Ritik'], a:3, why:'Correct. Especially Ritik. He would like this answer entered into the permanent record.'}
+  ];
+  let index=0, score=0, answered=false;
+  const form=el('loveQuizForm');
+  function renderQuestion(){
+    answered=false;
+    el('quiz-progress-text').textContent='Question '+(index+1)+' of '+questions.length;
+    el('quiz-progress-bar').style.width=((index+1)/questions.length*100)+'%';
+    el('quiz-question').textContent=questions[index].q;
+    el('quiz-options').innerHTML='';
+    el('quiz-feedback').textContent='';
+    el('quiz-next').disabled=true;
+    el('quiz-next').hidden=false;
+    el('quiz-restart').hidden=true;
+    questions[index].options.forEach((option,i)=>{
+      const b=document.createElement('button'); b.type='button'; b.className='quiz-option'; b.textContent=option;
+      b.addEventListener('click',()=>choose(i,b)); el('quiz-options').appendChild(b);
+    });
+  }
+  function choose(choice,button){
+    if(answered)return; answered=true;
+    const q=questions[index]; const buttons=[...el('quiz-options').querySelectorAll('button')];
+    buttons.forEach((b,i)=>{b.disabled=true;if(i===q.a)b.classList.add('correct');if(i===choice && i!==q.a)b.classList.add('wrong');});
+    if(choice===q.a){score++;el('quiz-feedback').textContent='Correct! '+q.why;}
+    else{el('quiz-feedback').textContent='Not quite! '+q.why;}
+    el('quiz-next').disabled=false;
+    el('quiz-next').textContent=index===questions.length-1?'See my result ♡':'Next question →';
+  }
+  function showResult(){
+    form.hidden=true; el('quiz-result').hidden=false;
+    el('quiz-score').textContent=score+'/10';
+    const img=el('quiz-cat');
+    if(score===10){
+      el('quiz-result-title').textContent='PURRFECT SCORE. ABSOLUTE LEGEND.';
+      el('quiz-result-copy').textContent='Every answer right. A cat is celebrating, the violins are playing, and Ritik is being unbearably smug about how well you know this love story.';
+      img.src='https://commons.wikimedia.org/wiki/Special:FilePath/Animatedkitty.gif';
+      img.alt='Animated kitty celebrating your perfect score';
+    } else if(score===9){
+      el('quiz-result-title').textContent='HAPPY HAPPY CAT LEVEL UNLOCKED!';
+      el('quiz-result-copy').textContent='Nine out of ten! That is a distinction in being adorable. Your happy cat has arrived.';
+      img.src='https://commons.wikimedia.org/wiki/Special:FilePath/Cartoon_Cat_Running.gif';
+      img.alt='Animated cat running happily';
+    } else if(score>=7){
+      el('quiz-result-title').textContent='A VERY GOOD CAT-TITUDE.';
+      el('quiz-result-copy').textContent='So close! A little more revision of the Ritik lore, then straight back for a rematch.';
+      img.src='https://commons.wikimedia.org/wiki/Special:FilePath/Walking_cat.gif';
+      img.alt='Animated walking cat';
+    } else {
+      el('quiz-result-title').textContent='THE CAT DEMANDS A REMATCH.';
+      el('quiz-result-copy').textContent='The examiner is suspicious that you were distracted by how cute the website is. Try again; the cat believes in you.';
+      img.src='https://commons.wikimedia.org/wiki/Special:FilePath/Sleeping-cat.gif';
+      img.alt='A sleeping cat';
+    }
+    el('quiz-next').hidden=true;
+    el('quiz-restart').hidden=false;
+  }
+  function restart(){index=0;score=0;form.hidden=false;el('quiz-result').hidden=true;renderQuestion();}
+  el('quiz-next').addEventListener('click',()=>{if(!answered)return;if(index<questions.length-1){index++;renderQuestion();}else showResult();});
+  el('quiz-restart').addEventListener('click',restart);
+  el('quiz-result-restart').addEventListener('click',restart);
+  if(form)renderQuestion();
+})();
+</script>
+
 </body></html>
