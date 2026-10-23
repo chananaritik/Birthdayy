@@ -141,6 +141,28 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
 .quiz-love-note{margin:20px auto 0;max-width:600px;padding:18px 20px;background:#fff7fa;border:1px solid #f0dfe5;border-radius:18px;font-family:Georgia,serif;font-size:1.15rem;line-height:1.8;color:#654b58}
 @media(max-width:720px){.reason-grid{grid-template-columns:1fr}.photos-permanent .photo-memory figcaption{font-size:.96rem}}
 
+
+/* Tap-to-reveal love notes: the words stay hidden until each photo is opened. */
+.photos-permanent .photo-memory{position:relative;cursor:pointer;outline-offset:4px}
+.photos-permanent .photo-memory img{cursor:pointer;transition:transform .45s ease,filter .3s ease}
+.photos-permanent .photo-memory:not(.revealed)::after{content:'Tap to reveal the love note ♡';position:absolute;left:10px;right:10px;bottom:12px;z-index:2;text-align:center;padding:10px 12px;border-radius:999px;background:rgba(255,250,252,.93);color:#765064;font-size:.82rem;font-weight:800;box-shadow:0 4px 18px #392a3520;pointer-events:none}
+.photos-permanent .photo-memory:not(.revealed) figcaption{display:none}
+.photos-permanent .photo-memory.revealed figcaption{display:block;animation:noteReveal .35s ease both}
+.photos-permanent .photo-memory.revealed img{filter:saturate(1.04)}
+.photos-permanent .photo-memory:focus-visible{outline:3px solid #d982a0}
+@keyframes noteReveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+/* A tiny roaming kitten that plays the existing recording once per tap. */
+.floating-kitten{position:fixed;z-index:1200;right:clamp(12px,3vw,36px);bottom:clamp(18px,8vh,72px);width:104px;border:0;background:transparent;padding:0;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;filter:drop-shadow(0 8px 10px #392a3525);animation:kittenWander 13s ease-in-out infinite;transform-origin:center;touch-action:manipulation}
+.floating-kitten .kitten-banner{order:0;background:#fff8fb;color:#694454;border:1px solid #efc8d5;border-radius:999px;padding:6px 12px;font-size:.78rem;font-weight:900;white-space:nowrap;box-shadow:0 4px 12px #392a3518}
+.floating-kitten .kitten-face{order:1;font-size:3.55rem;line-height:1.12;display:block;transition:transform .2s}
+.floating-kitten:hover .kitten-face,.floating-kitten:focus-visible .kitten-face{transform:scale(1.13) rotate(-8deg)}
+.floating-kitten:active .kitten-face{transform:scale(.92)}
+.floating-kitten:focus-visible{outline:3px solid #d982a0;outline-offset:5px;border-radius:18px}
+.floating-kitten.playing .kitten-banner{background:#392a35;color:white;border-color:#392a35}
+@keyframes kittenWander{0%,100%{transform:translate(0,0) rotate(0)}18%{transform:translate(-7vw,-5vh) rotate(-5deg)}37%{transform:translate(-12vw,3vh) rotate(4deg)}56%{transform:translate(-5vw,-11vh) rotate(-3deg)}76%{transform:translate(1vw,-4vh) rotate(5deg)}}
+@media(max-width:560px){.floating-kitten{width:78px;right:8px;bottom:14px}.floating-kitten .kitten-face{font-size:2.75rem}.floating-kitten .kitten-banner{font-size:.68rem;padding:5px 9px;}}
+@media(prefers-reduced-motion:reduce){.floating-kitten{animation:none}.photos-permanent .photo-memory img{transition:none}.photos-permanent .photo-memory.revealed figcaption{animation:none}}
+
 </style>
 </head>
 <body>
@@ -172,6 +194,10 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
   <p id="countdown-message">Counting down to 4:30 PM, 24 October ♡</p>
 </div>
 
+<button class="floating-kitten" id="floatingKitten" type="button" aria-label="Pet the kitten to play the meow recording once" title="Pet me to hear the meows!">
+  <span class="kitten-banner" id="kittenBanner">pet me ♡</span>
+  <span class="kitten-face" aria-hidden="true">🐈</span>
+</button>
 <div class="progress" id="progress"></div>
 <header class="hero" id="top">
 <span class="spark s1">✦</span><span class="spark s2">♡</span><span class="spark s3">✧</span><span class="spark s4">🐈</span>
@@ -235,84 +261,84 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
     <h2>Your favourite face, in a few frames.</h2>
     <p class="intro center">A few moments I would happily keep replaying.</p>
     <div class="photos photos-permanent">
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_4368.JPG" alt="A favourite kind of close" loading="lazy">
   <figcaption>I love the way a moment can slow down
 When you're right here, close to me.
 Of all the places I could ever be,
 This is where my heart feels free. ♡</figcaption>
 </figure>
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_4640.JPG" alt="Where the sky meets the sea" loading="lazy">
   <figcaption>If the world gave me a thousand shores,
 I'd still want to watch the waves with you.
 The sea is beautiful, that's true—
 But somehow, lovelier next to you. ♡</figcaption>
 </figure>
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_4646.JPG" alt="Golden-hour girl" loading="lazy">
   <figcaption>You make golden hours feel like gold,
 And little memories worth more than they seem.
 If I could keep one kind of light,
 I'd keep the one you bring to everything. ♡</figcaption>
 </figure>
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_4711.jpg" alt="A little green escape" loading="lazy">
   <figcaption>I love the green, the quiet, the air,
 The unplanned turns that take us somewhere.
 But the best part of every little escape
 Is having you there inside the frame. ♡</figcaption>
 </figure>
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_4758.JPG" alt="Ocean-side daydream" loading="lazy">
   <figcaption>The ocean has a thousand shades of blue,
 The sky has more than I can name.
 And still, in every view I get with you,
 You're the part I'll remember all the same. ♡</figcaption>
 </figure>
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_4789.JPG" alt="Us, framed by the sea" loading="lazy">
   <figcaption>Some views are made for photographs,
 Some moments are too lovely to explain.
 I'd take a hundred pictures of this day,
 And choose you in every frame again. ♡</figcaption>
 </figure>
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_4812.JPG" alt="A memory in silhouette" loading="lazy">
   <figcaption>Even when the light grows soft and low,
 There's something beautiful I get to see.
 A thousand sunsets could come and go—
 I'd still be glad you're here with me. ♡</figcaption>
 </figure>
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_4914.JPG" alt="Stopping to admire the little things" loading="lazy">
   <figcaption>I love the way you notice little things,
 The details that the busy world walks past.
 You make me want to look a little closer,
 And hold the lovely moments while they last. ♡</figcaption>
 </figure>
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_4983.JPG" alt="The smile behind the hat" loading="lazy">
   <figcaption>I love your smile, the easy kind,
 That makes a regular day feel new.
 If happiness could have a photograph,
 I think it might look a little like you. ♡</figcaption>
 </figure>
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_4996.JPG" alt="The hat deserves its own moment" loading="lazy">
   <figcaption>The hat may be having its own moment,
 And honestly, it has earned its fame.
 But if I had to choose my favourite thing,
 I'd still choose the girl beneath the brim. ♡</figcaption>
 </figure>
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_5156.JPG" alt="One more look" loading="lazy">
   <figcaption>One more look, one more little memory,
 One more reason this day stays with me.
 If I could pause the world awhile,
 I'd keep this moment and your smile. ♡</figcaption>
 </figure>
-<figure class="photo photo-memory">
+<figure class="photo photo-memory" role="button" tabindex="0" aria-expanded="false" aria-label="Tap to reveal the love note for this photo">
   <img src="photos/IMG_5157.JPG" alt="One more memory, just because" loading="lazy">
   <figcaption>I don't need a perfect photograph,
 Or every moment dressed in light.
@@ -543,6 +569,63 @@ function setCompanionMode(mode){
 })();
 
 </script>
+<script>
+// Each photo reveals its own four-line love note when tapped/clicked.
+(function setupClickablePhotoNotes(){
+  const photos = document.querySelectorAll('.photos-permanent .photo-memory');
+  photos.forEach((photo) => {
+    const toggle = () => {
+      const open = photo.classList.toggle('revealed');
+      photo.setAttribute('aria-expanded', String(open));
+      photo.setAttribute('aria-label', open ? 'Hide the love note for this photo' : 'Tap to reveal the love note for this photo');
+    };
+    photo.addEventListener('click', (event) => {
+      // The whole photo card is one control; prevent accidental text selection.
+      event.preventDefault();
+      toggle();
+    });
+    photo.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggle();
+      }
+    });
+  });
+})();
+
+// The floating kitten plays the existing recording from the beginning, once per click.
+(function setupFloatingKitten(){
+  const kitten = document.getElementById('floatingKitten');
+  const audio = document.getElementById('meowAudio');
+  const banner = document.getElementById('kittenBanner');
+  if (!kitten || !audio || !banner) return;
+  kitten.addEventListener('click', async () => {
+    try {
+      audio.pause();
+      audio.currentTime = 0;
+      audio.loop = false;
+      await audio.play();
+      kitten.classList.add('playing');
+      banner.textContent = 'meow time! ♡';
+    } catch (error) {
+      banner.textContent = 'audio not ready ♡';
+      const status = document.getElementById('meowStatus');
+      if (status) status.textContent = 'The meow recording could not start. Please check that the audio file is uploaded and try again. ♡';
+    }
+  });
+  audio.addEventListener('ended', () => {
+    kitten.classList.remove('playing');
+    banner.textContent = 'pet me ♡';
+  });
+  audio.addEventListener('pause', () => {
+    if (audio.ended || audio.currentTime === 0) {
+      kitten.classList.remove('playing');
+      banner.textContent = 'pet me ♡';
+    }
+  });
+})();
+</script>
+
 <!-- Sprinklr Live Chat: connects to the AI agent configured in your Sprinklr environment. -->
 <script>
 window.sprChatSettings = {"appId":"6ada8b9bb4f3c76c0b6a30b9_app_2195","skin":"MODERN"};
