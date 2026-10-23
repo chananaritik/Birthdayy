@@ -18,7 +18,7 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
 .story{background:#fff}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:34px}.card{background:linear-gradient(155deg,#fff,#fff8fa);border:1px solid var(--line);border-radius:24px;padding:25px;min-height:205px;line-height:1.65;color:var(--muted);box-shadow:0 8px 26px #6b334008}.card .emoji{font-size:2rem}.card b{display:block;color:var(--ink);font-size:1.12rem;margin:12px 0 7px}
 .bumble{background:#fff0e8}.quote{max-width:770px;margin:30px auto 0;background:#fff;border-radius:26px;padding:clamp(25px,5vw,45px);box-shadow:0 15px 40px #744d3d12;position:relative;font:clamp(1.25rem,3.5vw,2rem)/1.6 Georgia,serif}.quote:before{content:"“";font-size:6rem;line-height:.6;color:#ffc0cc;position:absolute;top:24px;left:22px}.quote p{position:relative;margin:20px 0 0}.quote small{font:750 .85rem system-ui;color:#a36d7e;display:block;margin-top:22px}
 .mint{background:var(--mint)}.interests{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.interest{background:#fff;border:1px solid #dcefeb;border-radius:22px;padding:23px 15px;text-align:center}.interest .big{font-size:2.4rem}.interest h3{margin:10px 0 6px}.interest p{font-size:.9rem;line-height:1.55;color:var(--muted);margin:0}
-.gallery{background:#fff}.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.photo{height:255px;border-radius:22px;overflow:hidden;position:relative;background:linear-gradient(135deg,#ffe1e8,#e0f5ef);border:2px dashed #e5b5c3;display:grid;place-items:center;text-align:center;padding:14px;color:#805c6b}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.photo .placeholder{position:relative;z-index:1}.photo .placeholder strong{display:block;margin:9px 0;font-size:1.05rem}.photo .placeholder span{font-size:.85rem}.photo .picker{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;z-index:2}.photo.preview img{display:block}.photo.preview .placeholder{display:none}.photo .remove{display:none;position:absolute;z-index:4;right:9px;top:9px;border:0;border-radius:99px;background:#fff;color:var(--ink);padding:7px 10px;cursor:pointer}.photo.preview .remove{display:block}.note{text-align:center;font-size:.84rem;line-height:1.6;color:#8b6d7b;margin:16px auto 0;max-width:700px}
+.gallery{background:#fff}.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:14px}.photo{height:255px;border-radius:22px;overflow:hidden;position:relative;background:linear-gradient(135deg,#ffe1e8,#e0f5ef);border:2px dashed #e5b5c3;display:grid;place-items:center;text-align:center;padding:14px;color:#805c6b}.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.photo .placeholder{position:relative;z-index:1}.photo .placeholder strong{display:block;margin:9px 0;font-size:1.05rem}.photo .placeholder span{font-size:.85rem}.photo .picker{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;z-index:2}.photo.preview img{display:block}.photo.preview .placeholder{display:none}.photo .remove{display:none;position:absolute;z-index:4;right:9px;top:9px;border:0;border-radius:99px;background:#fff;color:var(--ink);padding:7px 10px;cursor:pointer}.photo.preview .remove{display:block}.note{text-align:center;font-size:.84rem;line-height:1.6;color:#8b6d7b;margin:16px auto 0;max-width:700px}
 .letter{background:linear-gradient(145deg,#fff0f5,#fff8f0)}.paper{max-width:790px;margin:30px auto 0;padding:clamp(24px,6vw,52px);background:#fffdfb;border-radius:8px 8px 24px 24px;box-shadow:0 20px 60px #70425114;border-top:6px solid #f3b5c5}.dear{font:1.6rem Georgia,serif;color:#bd6e87}.paper textarea{width:100%;min-height:340px;resize:vertical;border:1px solid #f0d8e0;border-radius:14px;padding:16px;margin-top:16px;font:1.04rem/1.85 Georgia,serif;color:#4b3943;background:#fffdfd;outline-color:#e8a4b7}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}.status{font-size:.84rem;color:#7d6470;align-self:center}
 .final{text-align:center;background:#fff;padding:85px 20px}.heart{font-size:3.5rem;animation:heartbeat 1.8s infinite}.final p{max-width:620px;margin:18px auto 25px;line-height:1.8;color:var(--muted)}footer{text-align:center;padding:23px;color:#9a7e8b;font-size:.82rem;background:#fff}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ink);color:#fff;padding:12px 18px;border-radius:99px;z-index:35;transition:.25s;font-size:.9rem;white-space:nowrap}.toast.show{opacity:1;transform:translate(-50%,0)}.confetti{position:fixed;top:-25px;z-index:34;pointer-events:none;animation:fall linear forwards}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-16px) rotate(8deg)}}@keyframes heartbeat{0%,100%{transform:scale(1)}15%{transform:scale(1.13)}30%{transform:scale(1)}45%{transform:scale(1.09)}}@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.1}}
@@ -68,7 +68,7 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
 @media(max-width:650px){.bloopers-grid{grid-template-columns:1fr}}
 
 
-.photos-permanent .photo-memory{margin:0;overflow:hidden;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px #6b33400a}
+.photos-permanent .photo-memory{margin:0;overflow:hidden;border-radius:20px;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px #6b33400a;align-self:start;min-width:0}
 .photos-permanent .photo-memory img{display:block;width:100%;height:100%;aspect-ratio:4/5;object-fit:cover}
 .photos-permanent .photo-memory figcaption{padding:12px 14px 15px;text-align:center;color:var(--muted);font-size:.92rem;line-height:1.5}
 
@@ -127,8 +127,8 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
 /* Final polish: readable love notes, fixed letter, and the personal reasons section */
 .photos-permanent .photo-memory figcaption{white-space:pre-line;padding:17px 16px 19px;font-family:Georgia,serif;font-size:1rem;line-height:1.8;color:#654b58;background:linear-gradient(180deg,#fff,#fff9fb)}
 .photos-permanent .photo-memory figcaption::first-line{color:#b96883}
-.photos-permanent .photo-memory{height:auto;display:flex;flex-direction:column}
-.photos-permanent .photo-memory img{height:auto;aspect-ratio:4/5;object-fit:cover}
+.photos-permanent .photo-memory{height:auto;display:flex;flex-direction:column;align-self:start;min-width:0}
+.photos-permanent .photo-memory img{display:block;width:100%;height:clamp(220px, 27vw, 390px);flex:0 0 auto;aspect-ratio:auto;object-fit:cover}
 .paper .letter-copy{margin:20px 0 0;font:clamp(1.05rem,2.2vw,1.18rem)/1.95 Georgia,serif;color:#4b3943;white-space:pre-line}
 .paper .letter-copy p{margin:0 0 1.2em}
 .paper .letter-actions{display:flex;justify-content:center;margin-top:24px}
@@ -143,7 +143,7 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
 
 
 /* Tap-to-reveal love notes: the words stay hidden until each photo is opened. */
-.photos-permanent .photo-memory{position:relative;cursor:pointer;outline-offset:4px}
+.photos-permanent .photo-memory{position:relative;cursor:pointer;outline-offset:4px;align-self:start}
 .photos-permanent .photo-memory img{cursor:pointer;transition:transform .45s ease,filter .3s ease}
 .photos-permanent .photo-memory:not(.revealed)::after{content:'Tap to reveal the love note ♡';position:absolute;left:10px;right:10px;bottom:12px;z-index:2;text-align:center;padding:10px 12px;border-radius:999px;background:rgba(255,250,252,.93);color:#765064;font-size:.82rem;font-weight:800;box-shadow:0 4px 18px #392a3520;pointer-events:none}
 .photos-permanent .photo-memory:not(.revealed) figcaption{display:none}
@@ -152,15 +152,15 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
 .photos-permanent .photo-memory:focus-visible{outline:3px solid #d982a0}
 @keyframes noteReveal{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 /* A tiny roaming kitten that plays the existing recording once per tap. */
-.floating-kitten{position:fixed;z-index:1200;right:clamp(12px,3vw,36px);bottom:clamp(18px,8vh,72px);width:104px;border:0;background:transparent;padding:0;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;filter:drop-shadow(0 8px 10px #392a3525);animation:kittenWander 13s ease-in-out infinite;transform-origin:center;touch-action:manipulation}
+.floating-kitten{position:fixed;z-index:1200;left:clamp(12px,2vw,28px);right:auto;bottom:clamp(18px,4vh,36px);width:104px;border:0;background:transparent;padding:0;display:flex;flex-direction:column;align-items:center;gap:2px;cursor:pointer;filter:drop-shadow(0 8px 10px #392a3525);animation:kittenWander 17s ease-in-out infinite;transform-origin:center;touch-action:manipulation}
 .floating-kitten .kitten-banner{order:0;background:#fff8fb;color:#694454;border:1px solid #efc8d5;border-radius:999px;padding:6px 12px;font-size:.78rem;font-weight:900;white-space:nowrap;box-shadow:0 4px 12px #392a3518}
 .floating-kitten .kitten-face{order:1;font-size:3.55rem;line-height:1.12;display:block;transition:transform .2s}
 .floating-kitten:hover .kitten-face,.floating-kitten:focus-visible .kitten-face{transform:scale(1.13) rotate(-8deg)}
 .floating-kitten:active .kitten-face{transform:scale(.92)}
 .floating-kitten:focus-visible{outline:3px solid #d982a0;outline-offset:5px;border-radius:18px}
 .floating-kitten.playing .kitten-banner{background:#392a35;color:white;border-color:#392a35}
-@keyframes kittenWander{0%,100%{transform:translate(0,0) rotate(0)}18%{transform:translate(-7vw,-5vh) rotate(-5deg)}37%{transform:translate(-12vw,3vh) rotate(4deg)}56%{transform:translate(-5vw,-11vh) rotate(-3deg)}76%{transform:translate(1vw,-4vh) rotate(5deg)}}
-@media(max-width:560px){.floating-kitten{width:78px;right:8px;bottom:14px}.floating-kitten .kitten-face{font-size:2.75rem}.floating-kitten .kitten-banner{font-size:.68rem;padding:5px 9px;}}
+@keyframes kittenWander{0%,100%{transform:translate(0,0) rotate(0)}20%{transform:translate(2vw,-3vh) rotate(-5deg)}42%{transform:translate(5vw,-1vh) rotate(4deg)}64%{transform:translate(2vw,-6vh) rotate(-3deg)}82%{transform:translate(0,-2vh) rotate(5deg)}}
+@media(max-width:560px){.floating-kitten{width:78px;left:8px;right:auto;bottom:14px}.floating-kitten .kitten-face{font-size:2.75rem}.floating-kitten .kitten-banner{font-size:.68rem;padding:5px 9px;}.photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.photos-permanent .photo-memory img{height:clamp(190px,48vw,300px);}}
 @media(prefers-reduced-motion:reduce){.floating-kitten{animation:none}.photos-permanent .photo-memory img{transition:none}.photos-permanent .photo-memory.revealed figcaption{animation:none}}
 
 </style>
