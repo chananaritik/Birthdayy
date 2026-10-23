@@ -163,6 +163,57 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
 @media(max-width:560px){.floating-kitten{width:78px;left:8px;right:auto;bottom:14px}.floating-kitten .kitten-face{font-size:2.75rem}.floating-kitten .kitten-banner{font-size:.68rem;padding:5px 9px;}.photos{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.photos-permanent .photo-memory img{height:clamp(190px,48vw,300px);}}
 @media(prefers-reduced-motion:reduce){.floating-kitten{animation:none}.photos-permanent .photo-memory img{transition:none}.photos-permanent .photo-memory.revealed figcaption{animation:none}}
 
+
+/* Definitive fix for the reveal gallery: keep photos in normal document flow.
+   The generic .photo img rule uses position:absolute for older editable-photo cards;
+   that made these permanent gallery cards collapse while their captions were hidden. */
+.photos.photos-permanent{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  align-items:start !important;
+  gap:18px !important;
+}
+.photos-permanent .photo-memory{
+  position:relative !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-self:start !important;
+  height:auto !important;
+  min-width:0 !important;
+  overflow:hidden !important;
+}
+.photos-permanent .photo-memory > img{
+  position:static !important;
+  inset:auto !important;
+  display:block !important;
+  width:100% !important;
+  height:clamp(240px, 27vw, 390px) !important;
+  aspect-ratio:auto !important;
+  flex:0 0 auto !important;
+  object-fit:cover !important;
+}
+.photos-permanent .photo-memory:not(.revealed)::after{
+  bottom:12px !important;
+  top:auto !important;
+}
+.photos-permanent .photo-memory:not(.revealed) figcaption{display:none !important}
+.photos-permanent .photo-memory.revealed figcaption{
+  display:block !important;
+  flex:0 0 auto !important;
+}
+@media(max-width:850px){
+  .photos.photos-permanent{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  .photos-permanent .photo-memory > img{height:clamp(220px,42vw,330px) !important}
+}
+@media(max-width:560px){
+  .photos.photos-permanent{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:10px !important}
+  .photos-permanent .photo-memory > img{height:clamp(175px,48vw,260px) !important}
+  .photos-permanent .photo-memory:not(.revealed)::after{
+    left:5px !important;right:5px !important;bottom:7px !important;
+    padding:7px 6px !important;font-size:.68rem !important;
+  }
+}
+
 </style>
 </head>
 <body>
