@@ -407,11 +407,20 @@ Kitna bhi afsaana boloon, kam hi hai ♡</figcaption>
     <h2>A little birthday surprise, just for you ♡</h2>
     <p class="intro center">Some feelings deserve their own little video. I made this one for you, Jaanupie. ♡</p>
     <div class="media-frame">
-      <video controls playsinline preload="metadata">
-        <source src="video/Vartika.mp4" type="video/mp4">
-        Your browser does not support video playback.
-      </video>
-      <p class="media-caption">A little video, saved here just for you. ♡</p>
+      <div class="video-portrait">
+        <video controls playsinline preload="metadata">
+          <source src="video/Vartika.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+      </div>
+      <div class="video-side-note">
+        <div class="video-side-heart" aria-hidden="true">♡</div>
+        <div class="kicker">A tiny keepsake</div>
+        <h3>Just us, in a little moment.</h3>
+        <p>A little video, saved here just for you. ♡</p>
+        <div class="video-side-divider" aria-hidden="true">✦　♡　✦</div>
+        <p class="video-side-small">Some moments are too lovely to leave in the camera roll.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -793,6 +802,58 @@ window.sprChatSettings = {"appId":"6ada91cda24d5e0b7fdf4b61_app_66274660","skin"
   if(form)renderQuestion();
 })();
 </script>
+
+
+<style id="balanced-portrait-video-layout">
+/* Main video: portrait media + a real editorial side panel, rather than empty decorative space. */
+#birthday-video .media-frame{
+  max-width:1100px;
+  display:grid;
+  grid-template-columns:minmax(280px, 430px) minmax(250px, 1fr);
+  align-items:center;
+  justify-content:center;
+  gap:clamp(28px,5vw,72px);
+  padding:clamp(24px,4vw,52px);
+  min-height:0;
+  background:
+    radial-gradient(ellipse at 15% 18%,rgba(231,174,193,.27),transparent 42%),
+    radial-gradient(ellipse at 88% 82%,rgba(189,218,207,.34),transparent 45%),
+    linear-gradient(135deg,#fff6f8,#fffdf7 50%,#f3fbf7);
+}
+#birthday-video .video-portrait{width:100%;max-width:430px;justify-self:center}
+#birthday-video .video-portrait video{
+  display:block;width:100%;height:auto;max-height:78vh;aspect-ratio:9/16;
+  object-fit:contain;background:#211922;border-radius:18px;
+  box-shadow:0 18px 48px rgba(57,35,48,.22)
+}
+#birthday-video .video-side-note{max-width:390px;text-align:center;justify-self:center;padding:24px 12px}
+#birthday-video .video-side-heart{font-size:clamp(3rem,7vw,5rem);line-height:1;color:#d98ba5;margin-bottom:18px}
+#birthday-video .video-side-note h3{font-family:Georgia,serif;font-weight:500;font-size:clamp(1.55rem,3.3vw,2.25rem);line-height:1.25;margin:12px 0;color:var(--ink)}
+#birthday-video .video-side-note p{color:var(--muted);font-size:1.06rem;line-height:1.8;margin:14px auto}
+#birthday-video .video-side-divider{color:#b96883;letter-spacing:.1em;margin:26px 0;font-size:1.05rem}
+#birthday-video .video-side-note .video-side-small{font-family:Georgia,serif;font-style:italic;font-size:.98rem;max-width:310px}
+#birthday-video .media-caption{display:none}
+#bloopers .bloopers-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,3vw,30px)}
+#bloopers .blooper-card{padding:clamp(14px,2vw,22px);background:radial-gradient(ellipse at 0% 0%,rgba(231,174,193,.25),transparent 42%),radial-gradient(ellipse at 100% 100%,rgba(189,218,207,.3),transparent 45%),#fff;box-shadow:0 14px 38px rgba(107,51,64,.07)}
+#bloopers .blooper-card video{display:block;width:min(100%,330px);height:auto;aspect-ratio:9/16;object-fit:contain;background:#211922;border-radius:16px;margin:0 auto;box-shadow:0 12px 30px rgba(57,35,48,.17)}
+@media(max-width:760px){
+  #birthday-video .media-frame{grid-template-columns:minmax(0,1fr);gap:16px;padding:clamp(16px,4vw,28px)}
+  #birthday-video .video-portrait{max-width:min(100%,390px)}
+  #birthday-video .video-portrait video{max-height:74vh}
+  #birthday-video .video-side-note{padding:8px 8px 14px}
+  #birthday-video .video-side-heart{font-size:3rem;margin-bottom:10px}
+  #birthday-video .video-side-divider{margin:16px 0}
+}
+@media(max-width:650px){
+  #bloopers .bloopers-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  #bloopers .blooper-card{padding:10px;border-radius:18px}
+  #bloopers .blooper-card video{width:100%;border-radius:12px}
+}
+@media(max-width:420px){
+  #bloopers .bloopers-grid{grid-template-columns:1fr}
+  #bloopers .blooper-card video{width:min(100%,300px)}
+}
+</style>
 
 </body></html>
 <style id="portrait-video-finish">
