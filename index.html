@@ -123,6 +123,24 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
 @media(max-width:900px){.site-nav{flex-wrap:wrap}.nav-toggle{display:block}.nav-links{display:none;flex-basis:100%;justify-content:flex-start;padding:8px 0 4px}.nav-links.open{display:flex}}
 @media(max-width:560px){.quiz-options,.contact-cards{grid-template-columns:1fr}.countdown-units{gap:12px}.countdown-units div{min-width:52px}.quiz-actions{justify-content:stretch}.quiz-btn{flex:1}}
 
+
+/* Final polish: readable love notes, fixed letter, and the personal reasons section */
+.photos-permanent .photo-memory figcaption{white-space:pre-line;padding:17px 16px 19px;font-family:Georgia,serif;font-size:1rem;line-height:1.8;color:#654b58;background:linear-gradient(180deg,#fff,#fff9fb)}
+.photos-permanent .photo-memory figcaption::first-line{color:#b96883}
+.photos-permanent .photo-memory{height:auto;display:flex;flex-direction:column}
+.photos-permanent .photo-memory img{height:auto;aspect-ratio:4/5;object-fit:cover}
+.paper .letter-copy{margin:20px 0 0;font:clamp(1.05rem,2.2vw,1.18rem)/1.95 Georgia,serif;color:#4b3943;white-space:pre-line}
+.paper .letter-copy p{margin:0 0 1.2em}
+.paper .letter-actions{display:flex;justify-content:center;margin-top:24px}
+.reasons{background:linear-gradient(145deg,#fff7fa,#f8fffc)}
+.reason-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:28px}
+.reason-card{padding:23px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.88);box-shadow:0 10px 30px #6b334008}
+.reason-card .reason-icon{font-size:1.8rem}
+.reason-card h3{margin:10px 0 7px;font-size:1.08rem}
+.reason-card p{margin:0;color:var(--muted);line-height:1.7;font-size:.95rem}
+.quiz-love-note{margin:20px auto 0;max-width:600px;padding:18px 20px;background:#fff7fa;border:1px solid #f0dfe5;border-radius:18px;font-family:Georgia,serif;font-size:1.15rem;line-height:1.8;color:#654b58}
+@media(max-width:720px){.reason-grid{grid-template-columns:1fr}.photos-permanent .photo-memory figcaption{font-size:.96rem}}
+
 </style>
 </head>
 <body>
@@ -133,12 +151,13 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
   <div class="nav-links">
     <a href="#top">Home</a>
     <a href="#story">Our story</a>
+    <a href="#reasons">Reasons I love you</a>
     <a href="#gallery">Photos</a>
     <a href="#meow">Meow</a>
     <a href="#birthday-video">Video</a>
     <a href="#bloopers">Bloopers</a>
     <a href="#quiz">Love quiz</a>
-    <a href="#letter">Birthday letter</a>
+    <a href="#letter">Your letter</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -195,6 +214,21 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
   </div>
 </div></section>
 
+
+<section class="reasons" id="reasons"><div class="wrap">
+  <div class="center kicker">In case I don't say it enough</div>
+  <h2>A few of the reasons I love you.</h2>
+  <p class="intro center">Not a complete list. Just a few things I hope you always remember.</p>
+  <div class="reason-grid">
+    <article class="reason-card"><div class="reason-icon">☀️</div><h3>You make ordinary days glow</h3><p>It's not always about grand plans. Sometimes just thinking of you makes a normal day feel a little softer and brighter.</p></article>
+    <article class="reason-card"><div class="reason-icon">🐈</div><h3>Your wonderfully you priorities</h3><p>Your love for cats, peaceful places, and the small things that make life lovely is one of the many things I adore about you.</p></article>
+    <article class="reason-card"><div class="reason-icon">🌊</div><h3>The little world we can imagine</h3><p>Beach sunsets, good vegetarian food, unhurried conversations, and memories still waiting to happen—with you, the simplest plans sound special.</p></article>
+    <article class="reason-card"><div class="reason-icon">😂</div><h3>You give memories a personality</h3><p>From a first meeting that became a whole imaginary Bollywood scene to four legendary meows, our little details make me smile.</p></article>
+    <article class="reason-card"><div class="reason-icon">💗</div><h3>You deserve to feel chosen</h3><p>I hope you feel appreciated not just on birthdays or special days, but in the quiet, ordinary moments in between, too.</p></article>
+    <article class="reason-card"><div class="reason-icon">✨</div><h3>Because you're you</h3><p>Beyond every list and every line on this page, I love that there's only one Vartika—and I get to know her a little more.</p></article>
+  </div>
+</div></section>
+
 <section class="gallery" id="gallery">
   <div class="wrap">
     <div class="center kicker">Little pieces of us</div>
@@ -203,51 +237,87 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
     <div class="photos photos-permanent">
 <figure class="photo photo-memory">
   <img src="photos/IMG_4368.JPG" alt="A favourite kind of close" loading="lazy">
-  <figcaption>A favourite kind of close ♡</figcaption>
+  <figcaption>I love the way a moment can slow down
+When you're right here, close to me.
+Of all the places I could ever be,
+This is where my heart feels free. ♡</figcaption>
 </figure>
 <figure class="photo photo-memory">
   <img src="photos/IMG_4640.JPG" alt="Where the sky meets the sea" loading="lazy">
-  <figcaption>Where the sky meets the sea ♡</figcaption>
+  <figcaption>If the world gave me a thousand shores,
+I'd still want to watch the waves with you.
+The sea is beautiful, that's true—
+But somehow, lovelier next to you. ♡</figcaption>
 </figure>
 <figure class="photo photo-memory">
   <img src="photos/IMG_4646.JPG" alt="Golden-hour girl" loading="lazy">
-  <figcaption>Golden-hour girl ♡</figcaption>
+  <figcaption>You make golden hours feel like gold,
+And little memories worth more than they seem.
+If I could keep one kind of light,
+I'd keep the one you bring to everything. ♡</figcaption>
 </figure>
 <figure class="photo photo-memory">
   <img src="photos/IMG_4711.jpg" alt="A little green escape" loading="lazy">
-  <figcaption>A little green escape ♡</figcaption>
+  <figcaption>I love the green, the quiet, the air,
+The unplanned turns that take us somewhere.
+But the best part of every little escape
+Is having you there inside the frame. ♡</figcaption>
 </figure>
 <figure class="photo photo-memory">
   <img src="photos/IMG_4758.JPG" alt="Ocean-side daydream" loading="lazy">
-  <figcaption>Ocean-side daydream ♡</figcaption>
+  <figcaption>The ocean has a thousand shades of blue,
+The sky has more than I can name.
+And still, in every view I get with you,
+You're the part I'll remember all the same. ♡</figcaption>
 </figure>
 <figure class="photo photo-memory">
   <img src="photos/IMG_4789.JPG" alt="Us, framed by the sea" loading="lazy">
-  <figcaption>Us, framed by the sea ♡</figcaption>
+  <figcaption>Some views are made for photographs,
+Some moments are too lovely to explain.
+I'd take a hundred pictures of this day,
+And choose you in every frame again. ♡</figcaption>
 </figure>
 <figure class="photo photo-memory">
   <img src="photos/IMG_4812.JPG" alt="A memory in silhouette" loading="lazy">
-  <figcaption>A memory in silhouette ♡</figcaption>
+  <figcaption>Even when the light grows soft and low,
+There's something beautiful I get to see.
+A thousand sunsets could come and go—
+I'd still be glad you're here with me. ♡</figcaption>
 </figure>
 <figure class="photo photo-memory">
   <img src="photos/IMG_4914.JPG" alt="Stopping to admire the little things" loading="lazy">
-  <figcaption>Stopping to admire the little things ♡</figcaption>
+  <figcaption>I love the way you notice little things,
+The details that the busy world walks past.
+You make me want to look a little closer,
+And hold the lovely moments while they last. ♡</figcaption>
 </figure>
 <figure class="photo photo-memory">
   <img src="photos/IMG_4983.JPG" alt="The smile behind the hat" loading="lazy">
-  <figcaption>The smile behind the hat ♡</figcaption>
+  <figcaption>I love your smile, the easy kind,
+That makes a regular day feel new.
+If happiness could have a photograph,
+I think it might look a little like you. ♡</figcaption>
 </figure>
 <figure class="photo photo-memory">
   <img src="photos/IMG_4996.JPG" alt="The hat deserves its own moment" loading="lazy">
-  <figcaption>The hat deserves its own moment ♡</figcaption>
+  <figcaption>The hat may be having its own moment,
+And honestly, it has earned its fame.
+But if I had to choose my favourite thing,
+I'd still choose the girl beneath the brim. ♡</figcaption>
 </figure>
 <figure class="photo photo-memory">
   <img src="photos/IMG_5156.JPG" alt="One more look" loading="lazy">
-  <figcaption>One more look ♡</figcaption>
+  <figcaption>One more look, one more little memory,
+One more reason this day stays with me.
+If I could pause the world awhile,
+I'd keep this moment and your smile. ♡</figcaption>
 </figure>
 <figure class="photo photo-memory">
   <img src="photos/IMG_5157.JPG" alt="One more memory, just because" loading="lazy">
-  <figcaption>One more memory, just because ♡</figcaption>
+  <figcaption>I don't need a perfect photograph,
+Or every moment dressed in light.
+Give me the real, the warm, the ordinary—
+And you beside me; that feels right. ♡</figcaption>
 </figure>
     </div>
   </div>
@@ -261,7 +331,7 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
     <p class="intro center">Some things deserve more than a photograph.</p>
     <div class="media-frame">
       <video controls playsinline preload="metadata">
-        <source src="videos/vartika-video.mp4" type="video/mp4">
+        <source src="IMG_4488.MOV" type="video/quicktime">
         Your browser does not support video playback.
       </video>
       <p class="media-caption">A little video, saved here just for you. ♡</p>
@@ -292,7 +362,7 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
         <p>For scientific completeness, obviously.</p>
       </article>
     </div>
-    <p class="note">Add your clips in the <code>videos</code> folder using the filenames shown above. You can add more blooper cards by copying one card and changing its filename and caption.</p>
+    <p class="note">When you have more bloopers ready, add them to the <code>videos</code> folder as <code>bloopers-1.mp4</code> and <code>bloopers-2.mp4</code>, or update these filenames to match your clips.</p>
   </div>
 </section>
 
@@ -319,6 +389,7 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
         <p id="quiz-result-copy"></p>
         <img id="quiz-cat" alt="A celebratory cat GIF" loading="lazy">
         <p class="cat-credit">Cat GIFs from Wikimedia Commons; see credits below.</p>
+        <div class="quiz-love-note">You passed the quiz, but here's the real answer: even if you got every question wrong, I'd still choose you. Every time. ♡</div>
         <button type="button" class="quiz-btn" id="quiz-result-restart">One more round? ♡</button>
       </div>
     </div>
@@ -339,22 +410,16 @@ section{padding:78px 20px}.wrap{max-width:1000px;margin:auto}.center{text-align:
   </div>
 </section>
 
-<section class="letter" id="letter"><div class="wrap"><div class="center kicker">The part that's yours to edit</div><h2>A birthday letter, from me to you.</h2><p class="intro center">Edit every word so it sounds like you. Save a local copy or download the wish before publishing.</p><div class="paper"><div class="dear">Dear Vartika,</div><textarea id="wish" aria-label="Editable birthday wish">Happy birthday, Vartika ❤️
-
-I don't know if I can put into words exactly what you mean to me, but I want to try.
-
-It's funny how one little Bumble bio can become the beginning of someone who brings so much light into your world. I'm grateful that our paths crossed, and that I got to know the person behind those lines—the person who makes me smile just by being herself.
-
-I hope this new year of your life brings you the kind of happiness that feels peaceful and real: beautiful beach sunsets, delicious vegetarian food, cats to fall in love with, unexpected adventures, and people who make you feel safe and appreciated.
-
-You deserve to feel loved, celebrated, understood, and chosen—not just today, but on all the ordinary days in between.
-
-Thank you for being you, and for making my world a little brighter.
-
-Happy birthday, Vartika. I hope this is the start of a year that is as lovely as you are.
-
-With lots of love,
-Someone who's very glad he met you ♡</textarea><div class="actions"><button class="btn" onclick="saveWish()">Save wish on this device</button><button class="btn light" onclick="downloadWish()">Download wish as .txt</button><span class="status" id="saveStatus">You can edit every word above.</span></div></div></div></section>
+<section class="letter" id="letter"><div class="wrap"><div class="center kicker">A little something from my heart</div><h2>A birthday letter, just for you.</h2><p class="intro center">No form to fill in, no right words to find. Just a letter I wanted you to have.</p><div class="paper"><div class="dear">Dear Vartika,</div><div class="letter-copy" id="wishText">
+<p>Happy birthday, Vartika ❤️</p>
+<p>I don't know if I can put into words exactly what you mean to me, but I want to try.</p>
+<p>It's funny how one little Bumble bio can become the beginning of someone who brings so much light into your world. I'm grateful that our paths crossed, and that I got to know the person behind those lines—the person who makes me smile just by being herself.</p>
+<p>I hope this new year of your life brings you the kind of happiness that feels peaceful and real: beautiful beach sunsets, delicious vegetarian food, cats to fall in love with, unexpected adventures, and people who make you feel safe and appreciated.</p>
+<p>You deserve to feel loved, celebrated, understood, and chosen—not just today, but on all the ordinary days in between.</p>
+<p>Thank you for being you, and for making my world a little brighter.</p>
+<p>Happy birthday, Vartika. I hope this is the start of a year that is as lovely as you are.</p>
+<p>With lots of love,<br>Someone who's very glad he met you ♡</p>
+</div><div class="letter-actions"><button class="btn light" type="button" onclick="downloadWish()">Download your letter as .txt ♡</button></div></div></div></section>
 <section class="final"><div class="heart">💗</div><div class="kicker">One last thing</div><h2>I'm glad it's you, Vartika.</h2><p>May your birthday be soft around the edges, full of your favourite things, and the beginning of a year that gives back some of the happiness you bring into the world.</p><button class="btn" onclick="celebrate()">Tap for birthday magic ✨</button></section>
 
 <section class="story" id="meow"><div class="wrap">
@@ -408,9 +473,12 @@ const progress=document.getElementById('progress');window.addEventListener('scro
 function celebrate(){const emojis=['💗','✨','🌸','🐾','💖','⭐','🐚'];for(let i=0;i<42;i++){const el=document.createElement('span');el.className='confetti';el.textContent=emojis[Math.random()*emojis.length|0];el.style.left=Math.random()*100+'vw';el.style.animationDuration=(2.5+Math.random()*3)+'s';el.style.fontSize=(14+Math.random()*18)+'px';document.body.appendChild(el);setTimeout(()=>el.remove(),6000)}const t=document.getElementById('toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}
 function previewPhoto(event,input){const file=event.target.files&&event.target.files[0];if(!file||!file.type.startsWith('image/'))return;const card=input.closest('.photo'),img=card.querySelector('img');if(img.dataset.url)URL.revokeObjectURL(img.dataset.url);img.dataset.url=URL.createObjectURL(file);img.src=img.dataset.url;img.hidden=false;card.classList.add('preview')}
 function removePhoto(event,button){event.preventDefault();event.stopPropagation();const card=button.closest('.photo'),img=card.querySelector('img');if(img.dataset.url)URL.revokeObjectURL(img.dataset.url);img.removeAttribute('src');delete img.dataset.url;img.hidden=true;card.classList.remove('preview');card.querySelector('input').value=''}
-function saveWish(){try{localStorage.setItem('vartikaBirthdayWish',document.getElementById('wish').value);document.getElementById('saveStatus').textContent='Saved on this device ✓'}catch(e){document.getElementById('saveStatus').textContent='Could not save here—download a text copy instead.'}}
-function downloadWish(){const url=URL.createObjectURL(new Blob([document.getElementById('wish').value],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='birthday-wish-for-vartika.txt';a.click();URL.revokeObjectURL(url)}
-try{const saved=localStorage.getItem('vartikaBirthdayWish');if(saved)document.getElementById('wish').value=saved}catch(e){}
+function downloadWish(){
+  const letter=document.getElementById('wishText');
+  const text=letter ? letter.innerText.trim() : '';
+  const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));
+  const a=document.createElement('a');a.href=url;a.download='birthday-letter-for-vartika.txt';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
 
 const awardLines = [
   "Citation: for walking towards one person and accidentally triggering an entire imaginary Mohabbatein soundtrack, breeze machine and dance ensemble.",
